@@ -2,8 +2,8 @@ import logo from "/src/assets/images/Oslo-logo-sort-til-skjerm-og-utskrift/Oslo-
 
 const Oklogo = () => {
   return (
-    <div className="flex h-14">
-      <img src={logo} className="h-full w-full" alt="logo" />
+    <div className="flex ">
+      <img src={logo} className="h-12 w-full" alt="logo" />
     </div>
   );
 };

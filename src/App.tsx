@@ -26,27 +26,36 @@ function App() {
             <Nintendowcspiller />
           </div>
 
-          <div className="flex w-full justify-between text-2xl">
-            <div className="flex">
+          <div className="grid grow w-full grid-cols-3 justify-between text-2xl">
+            <div className="m-4 mt-12 ml-12 flex">
               <ul>
                 {data.scores
-                  .sort((a, b) => a.name.localeCompare(b.name))
-                  .map((item: { name: string; ranking: number }) => (
-                    <li key={item.name}>
-                      {item.ranking}. {item.name}{" "}
-                    </li>
-                  ))}
+                  .sort(function (a, b) {
+                    return a.ranking - b.ranking;
+                  })
+                  .map(
+                    (item: {
+                      name: string;
+                      ranking: number;
+                      score: Array<Number>;
+                    }) => (
+                      <li key={item.name}>
+                        {item.ranking}. {item.name} -{" "}
+                        {item.score[item.score.length - 1]}
+                      </li>
+                    )
+                  )}
               </ul>
             </div>
-            <div className="flex justify-center flex-col">
-              <p className="text-center">Ledelse</p>
-              <ul>
+            <div className="m-4 flex flex-col ">
+
+              <div className="flex justify-center">
                 <ul>
                   {data.scores
                     .sort(function (a, b) {
                       return a.ranking - b.ranking;
                     })
-                    .slice(0, 1)
+                    .slice(0, 4)
                     .map(
                       (item: {
                         name: string;
@@ -55,33 +64,40 @@ function App() {
                       }) => (
                         <li key={item.name}>
                           <div className="relative">
-                            <img className="h-48" src={item.imgUrl.card} alt="" />
+                            <img
+                              className="h-48 scale-90 hover:scale-100 ease-in duration-500"
+                              src={`/profiles/card/${item.name
+                                .toLowerCase()
+                                .replace(/\s/g, "")}.png`}
+                              alt=""
+                            />
                           </div>
                         </li>
                       )
                     )}
                 </ul>
-              </ul>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <div className="mb-2">
+            <div className="mt-12 ml-12 flex flex-col ">
+              <div className="m-4 ">
                 <p>Siste resultater:</p>
                 <ul>
-                  <li>Qatar - Ecuador</li>
+                  <li>Qatar 0 - 2 Ecuador</li>
                 </ul>
               </div>
-              <div className="">
+              <div className="m-4">
                 <p>Neste kamper:</p>
                 <ul>
                   <li>England - Iran</li>
                   <li>Senegal - Nederland</li>
+                  <li>USA - Wales</li>
                 </ul>
               </div>
             </div>
           </div>
-          <div className="flex self-end h-14 items-center justify-between text-wcbeige-default">
+          <div className="flex h-14 w-full items-center justify-between self-end text-wcbeige-default">
             <Oklogo />
-            <span className="flex ">Sist oppdatert: 20.11.22</span>
+            <span className="text-center">Sist oppdatert: 20.11.22</span>
             <Wclogo />
           </div>
         </div>

@@ -1,3 +1,5 @@
+import fry from "/src/assets/images/shut-up-and-take-my-money.png";
+
 const TakeMyMoney = ({}): JSX.Element => {
   let takemymoneyaudio = new Audio("/takemymoney.mp3");
 
@@ -7,8 +9,9 @@ const TakeMyMoney = ({}): JSX.Element => {
   return (
     <>
       <div className="flex cursor-pointer">
-        <img className="h-14"
-          src="/src/assets/images/shut-up-and-take-my-money.png"
+        <img
+          className="h-14"
+          src={fry}
           onClick={start}
           alt="Shut up and take my money"
         />

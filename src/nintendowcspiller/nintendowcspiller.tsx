@@ -1,4 +1,5 @@
 import { useState } from "react";
+import player from '/src/assets/images/player.png'
 
 const Nintendowcspiller = ({}): JSX.Element => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -16,9 +17,9 @@ const Nintendowcspiller = ({}): JSX.Element => {
     <>
       <div className="flex cursor-pointer">
         <img className="h-14"
-          src="/src/assets/images/player.png"
+          src={player}
           onClick={play}
-          alt="Shut up and take my money"
+          alt="nintendo world cup player"
         />
       </div>
     </>

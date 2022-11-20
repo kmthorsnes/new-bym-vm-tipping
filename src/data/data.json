@@ -2,7 +2,7 @@
   "scores": [
     {
       "name": "Blend",
-      "score": 0,
+      "score": [0,0],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -11,7 +11,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 1,
+      "ranking": 5,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/blend.png",
         "card": "/src/assets/images/profiles/card/blend.png",
@@ -20,7 +20,7 @@
     },
     {
       "name": "Caroline",
-      "score": 0,
+      "score": [0,0],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -29,7 +29,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 1,
+      "ranking": 5,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/caroline.png",
         "card": "/src/assets/images/profiles/card/caroline.png",
@@ -38,7 +38,7 @@
     },
     {
       "name": "Dag",
-      "score": 0,
+      "score": [0,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Finn Erik",
-      "score": 0,
+      "score": [0,0],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -65,7 +65,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 1,
+      "ranking": 5,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/finnerik.png",
         "badge": "/src/assets/images/profiles/background/finnerik.png",
@@ -74,7 +74,7 @@
     },
     {
       "name": "Guled",
-      "score": 0,
+      "score": [0,0],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -83,7 +83,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 1,
+      "ranking": 5,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/guled.png",
         "badge": "/src/assets/images/profiles/background/guled.png",
@@ -92,7 +92,7 @@
     },
     {
       "name": "Hans Erling",
-      "score": 0,
+      "score": [0,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -107,10 +107,27 @@
         "badge": "/src/assets/images/profiles/background/hanserling.png",
         "withoutBackground": "/src/assets/images/profiles/background/hanserling.png"
       }
+    },{
+      "name": "Ingunn",
+      "score": [0,0],
+      "lastScore": 0,
+      "groupStage": 0,
+      "gsStandings": 0,
+      "quarter": 0,
+      "semi": 0,
+      "final": 0,
+      "champion": 0,
+      "topScorers": 0,
+      "ranking": 5,
+      "imgUrl": {
+        "original": "/src/assets/images/profiles/background/ingunn.png",
+        "badge": "/src/assets/images/profiles/background/ingunn.png",
+        "withoutBackground": "/src/assets/images/profiles/background/ingunn.png"
+      }
     },
     {
       "name": "Kalle",
-      "score": 0,
+      "score": [0,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -128,7 +145,7 @@
     },
     {
       "name": "Samir",
-      "score": 0,
+      "score": [0,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -146,7 +163,7 @@
     },
     {
       "name": "Torgeir",
-      "score": 0,
+      "score": [0,0],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -155,7 +172,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 1,
+      "ranking": 5,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/torgeir.png",
         "badge": "/src/assets/images/profiles/background/torgeir.png",
@@ -164,7 +181,7 @@
     },
     {
       "name": "William",
-      "score": 0,
+      "score": [0,0],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -173,30 +190,13 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 1,
+      "ranking": 5,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/william.png",
         "badge": "/src/assets/images/profiles/background/william.png",
         "withoutBackground": "/src/assets/images/profiles/background/william.png"
       }
-    },{
-        "name": "Ingunn",
-        "score": 0,
-        "lastScore": 0,
-        "groupStage": 0,
-        "gsStandings": 0,
-        "quarter": 0,
-        "semi": 0,
-        "final": 0,
-        "champion": 0,
-        "topScorers": 0,
-        "ranking": 1,
-        "imgUrl": {
-          "original": "/src/assets/images/profiles/background/ingunn.png",
-          "badge": "/src/assets/images/profiles/background/ingunn.png",
-          "withoutBackground": "/src/assets/images/profiles/background/ingunn.png"
-        }
-      }
+    }
   ],
   "nextMatchStats": {
     "nextMatch": { "hWin": 0, "bWin": 0 },
