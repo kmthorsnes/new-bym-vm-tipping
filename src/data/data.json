@@ -14,8 +14,8 @@
       "ranking": 1,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/blend.png",
-        "badge": "/src/assets/images/profiles/background/blend.png",
-        "withoutBackground": "/src/assets/images/profiles/background/blend.png"
+        "card": "/src/assets/images/profiles/card/blend.png",
+        "withoutBackground": "/src/assets/images/profiles/transparent/blend.png"
       }
     },
     {
@@ -32,8 +32,8 @@
       "ranking": 1,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/caroline.png",
-        "badge": "/src/assets/images/profiles/background/caroline.png",
-        "withoutBackground": "/src/assets/images/profiles/background/caroline.png"
+        "card": "/src/assets/images/profiles/card/caroline.png",
+        "withoutBackground": "/src/assets/images/profiles/transparent/caroline.png"
       }
     },
     {
@@ -55,7 +55,7 @@
       }
     },
     {
-      "name": "Finn-erik",
+      "name": "Finn Erik",
       "score": 0,
       "lastScore": 0,
       "groupStage": 0,
@@ -67,9 +67,9 @@
       "topScorers": 0,
       "ranking": 1,
       "imgUrl": {
-        "original": "/src/assets/images/profiles/background/finn-erik.png",
-        "badge": "/src/assets/images/profiles/background/finn-erik.png",
-        "withoutBackground": "/src/assets/images/profiles/background/finn-erik.png"
+        "original": "/src/assets/images/profiles/background/finnerik.png",
+        "badge": "/src/assets/images/profiles/background/finnerik.png",
+        "withoutBackground": "/src/assets/images/profiles/background/finnerik.png"
       }
     },
     {
@@ -91,7 +91,7 @@
       }
     },
     {
-      "name": "Hans-Erling",
+      "name": "Hans Erling",
       "score": 0,
       "lastScore": 0,
       "groupStage": 0,
@@ -103,9 +103,9 @@
       "topScorers": 0,
       "ranking": 1,
       "imgUrl": {
-        "original": "/src/assets/images/profiles/background/hans-erling.png",
-        "badge": "/src/assets/images/profiles/background/hans-erling.png",
-        "withoutBackground": "/src/assets/images/profiles/background/hans-erling.png"
+        "original": "/src/assets/images/profiles/background/hanserling.png",
+        "badge": "/src/assets/images/profiles/background/hanserling.png",
+        "withoutBackground": "/src/assets/images/profiles/background/hanserling.png"
       }
     },
     {
@@ -124,24 +124,6 @@
         "original": "/src/assets/images/profiles/background/kalle.png",
         "badge": "/src/assets/images/profiles/background/kalle.png",
         "withoutBackground": "/src/assets/images/profiles/background/kalle.png"
-      }
-    },
-    {
-      "name": "Nikolai",
-      "score": 0,
-      "lastScore": 0,
-      "groupStage": 0,
-      "gsStandings": 0,
-      "quarter": 0,
-      "semi": 0,
-      "final": 0,
-      "champion": 0,
-      "topScorers": 0,
-      "ranking": 1,
-      "imgUrl": {
-        "original": "/src/assets/images/profiles/background/nikolai.png",
-        "badge": "/src/assets/images/profiles/background/nikolai.png",
-        "withoutBackground": "/src/assets/images/profiles/background/nikolai.png"
       }
     },
     {
