@@ -37,11 +37,10 @@ function App() {
                     (item: {
                       name: string;
                       ranking: number;
-                      score: Array<Number>;
+                      score: Array<Number> | any;
                     }) => (
                       <li key={item.name}>
-                        {item.ranking}. {item.name} -{" "}
-                        {item.score[item.score.length - 1]}
+                        {item.ranking}. {item.name} - {item.score[item.score.length - 1]}
                       </li>
                     )
                   )}
