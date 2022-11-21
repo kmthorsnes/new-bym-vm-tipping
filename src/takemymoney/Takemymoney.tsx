@@ -8,7 +8,7 @@ const TakeMyMoney = ({}): JSX.Element => {
   };
   return (
     <>
-      <div className="flex cursor-pointer">
+      <div className="flex cursor-help">
         <img
           className="h-14"
           src={fry}
