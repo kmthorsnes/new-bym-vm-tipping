@@ -1,12 +1,11 @@
 import { useState } from "react";
-import player from '/src/assets/images/player.png'
+import player from "/src/assets/images/player.png";
+import song from "/src/assets/sounds/music/music.mp3";
 
 const Nintendowcspiller = ({}): JSX.Element => {
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const [music, setMusic] = useState(
-    new Audio("/src/assets/sounds/music/music.mp3")
-  );
+  const [music, setMusic] = useState(new Audio(song));
 
   const play = () => {
     setIsPlaying(!isPlaying);
@@ -16,7 +15,8 @@ const Nintendowcspiller = ({}): JSX.Element => {
   return (
     <>
       <div className="flex cursor-pointer">
-        <img className="h-14"
+        <img
+          className="h-14"
           src={player}
           onClick={play}
           alt="nintendo world cup player"
