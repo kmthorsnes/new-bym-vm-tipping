@@ -16,8 +16,8 @@ import Wclogo from "./wclogo/Wclogo";
 function App() {
   return (
     <div className="App">
-      <div className=" h-screen w-screen p-2">
-        <div className="border-red-600 flex h-full w-full flex-col  rounded border-4 border-wcbeige-default p-2 ">
+      <div className=" min-h-screen min-w-max p-2">
+        <div className="border-red-600  flex h-full w-full flex-col  rounded border-4 border-wcbeige-default p-2 ">
           <div className="flex w-full justify-between justify-items-end">
             <TakeMyMoney />
             <div className="flex text-center text-5xl text-wcbeige-default">
