@@ -37,7 +37,7 @@ function App() {
             <Nintendowcspiller />
           </div>
 
-          <div className="grid grow grid-cols-3 justify-between text-2xl">
+          <div className="grid  grid-cols-3 justify-between text-2xl">
             <div className="m-4 mt-12 ml-12 flex">
               <ul>
                 {data.scores
@@ -59,61 +59,102 @@ function App() {
                   )}
               </ul>
             </div>
-            <div className="m-4 flex flex-col ">
-              <div className="flex justify-center">
-                <ul>
-                  {data.scores
-                    .sort(function (a, b) {
-                      return a.ranking - b.ranking;
-                    })
-                    .slice(0, 3)
-                    .map(
-                      (item: {
-                        name: string;
-                        ranking: number;
-                        imgUrl: any;
-                      }) => (
-                        <li key={item.name}>
-                          <div className="relative">
-                            <img
-                            onClick={playRandomSound}
-                              className="h-48 scale-90 duration-500 ease-in hover:scale-100 cursor-not-allowed"
-                              src={`/profiles/card/${item.name
-                                .toLowerCase()
-                                .replace(/\s/g, "")}.png`}
-                              alt=""
-                            />
-                          </div>
-                        </li>
-                      )
-                    )}
-                </ul>
+            <div className="m-4 flex h-full flex-col ">
+              <div className="flex h-2/4 w-full flex-row justify-center">
+                {data.scores
+                  .sort(function (a, b) {
+                    return a.ranking - b.ranking;
+                  })
+                  .filter((score) => score.ranking === 1)
+                  .map(
+                    (item: { name: string; ranking: number; imgUrl: any }) => (
+                      <img
+                        key={item.name}
+                        onClick={playRandomSound}
+                        className="h-full"
+                        src={`/profiles/card/${item.name
+                          .toLowerCase()
+                          .replace(/\s/g, "")}.png`}
+                        alt=""
+                      />
+                    )
+                  )}
+              </div>
+              <div className="flex h-1/4 w-full flex-row justify-center">
+                {data.scores
+                  .sort(function (a, b) {
+                    return a.ranking - b.ranking;
+                  })
+                  .filter((score) => score.ranking === 2)
+                  .map(
+                    (item: { name: string; ranking: number; imgUrl: any }) => (
+                      <img
+                        key={item.name}
+                        onClick={playRandomSound}
+                        className="h-full"
+                        src={`/profiles/card/${item.name
+                          .toLowerCase()
+                          .replace(/\s/g, "")}.png`}
+                        alt=""
+                      />
+                    )
+                  )}
+              </div>
+              <div className="flex h-1/5 w-full flex-row items-center">
+                {data.scores
+                  .sort(function (a, b) {
+                    return a.ranking - b.ranking;
+                  })
+                  .filter((score) => score.ranking === 3)
+                  .map(
+                    (item: { name: string; ranking: number; imgUrl: any }) => (
+                      <div key={item.name} className="">
+                        <img
+                          onClick={playRandomSound}
+                          className=""
+                          src={`/profiles/card/${item.name
+                            .toLowerCase()
+                            .replace(/\s/g, "")}.png`}
+                          alt=""
+                        />
+                      </div>
+                    )
+                  )}
               </div>
             </div>
-            <div className="mt-12 ml-12 flex flex-col ">
+
+            <div className="mt-12 ml-12 flex flex-col">
               <div className="m-4 ">
-                <p>Siste resultater:</p>
+                <p>
+                  <strong>Siste resultater:</strong>
+                </p>
                 <ul>
-                  <li>England 6 - 2 Iran*</li>
-                  <li>Senegal 0 - 2 Nederland*</li>
-                  <li>USA 1 - 1 Wales</li>
+                  <li>Argentina 1 - 2 Saudi-Arabia</li>
+                  <li>
+                    <strong>Mexico 0 - 0 Polen</strong>
+                  </li>
+                  <li>
+                    <strong>Danmark 0 - 0 Tunisia</strong>
+                  </li>
+                  <li>Frankrike 4 - 1 Australia</li>
                 </ul>
               </div>
               <div className="m-4">
-                <p>Neste kamper:</p>
+                <p>
+                  <strong>Neste kamper:</strong>
+                </p>
                 <ul>
-                  <li>11:00 : Argentina - Saudi Arabia</li>
-                  <li>14:00 : Danmark - Tunisia*</li>
-                  <li>17:00 : Mexico - Polen*</li>
-                  <li>20:00 : Frankrike - Australia</li>
+                  <li>11:00 : Marokko - Kroatia</li>
+                  <li>14:00 : Tyskland - Japan</li>
+                  <li>17:00 : Spania - Costa Rica</li>
+                  <li>20:00 : Belgia - Canada</li>
                 </ul>
-                <p>* Tellende kamper i konkurransen</p>
               </div>
             </div>
           </div>
           <div className="flex h-14 w-full items-center justify-between self-end text-wcbeige-default">
             <Oklogo />
-            <span className="text-center">Sist oppdatert: 21.11.22</span>
+            <span className="text-center">Sist oppdatert: 23.11.22</span>
             <Wclogo />
           </div>
         </div>
