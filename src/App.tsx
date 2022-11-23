@@ -85,7 +85,7 @@ function App() {
                   .sort(function (a, b) {
                     return a.ranking - b.ranking;
                   })
-                  .filter((score) => score.ranking === 2)
+                  .filter((score) => score.ranking === 3)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
                       <img
@@ -105,7 +105,7 @@ function App() {
                   .sort(function (a, b) {
                     return a.ranking - b.ranking;
                   })
-                  .filter((score) => score.ranking === 3)
+                  .filter((score) => score.ranking === 4)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
                       <div key={item.name} className="h-full">
@@ -129,14 +129,8 @@ function App() {
                   <strong>Siste resultater:</strong>
                 </p>
                 <ul>
-                  <li>Argentina 1 - 2 Saudi-Arabia</li>
-                  <li>
-                    <strong>Mexico 0 - 0 Polen</strong>
-                  </li>
-                  <li>
-                    <strong>Danmark 0 - 0 Tunisia</strong>
-                  </li>
-                  <li>Frankrike 4 - 1 Australia</li>
+                  <li>Marokko 0 - 0 Kroatia</li>
+
                 </ul>
               </div>
               <div className="m-4">
@@ -144,7 +138,7 @@ function App() {
                   <strong>Neste kamper:</strong>
                 </p>
                 <ul>
-                  <li>11:00 : Marokko - Kroatia</li>
+                  
                   <li>14:00 : Tyskland - Japan</li>
                   <li>17:00 : Spania - Costa Rica</li>
                   <li>20:00 : Belgia - Canada</li>
