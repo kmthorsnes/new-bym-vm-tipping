@@ -27,8 +27,8 @@ const playRandomSound = () => {
 function App() {
   return (
     <div className="App">
-      <div className="flex min-h-screen flex-col p-2">
-        <div className="border-red-600 flex h-full w-full max-w-full grow flex-col rounded border-4 border-wcbeige-default p-2 ">
+      <div className="flex h-screen flex-col p-2">
+        <div className="border-red-600 flex h-full  w-full max-w-full flex-col rounded border-4 border-wcbeige-default p-2 ">
           <div className="flex w-full justify-between justify-items-end">
             <TakeMyMoney />
             <div className="flex text-center text-5xl text-wcbeige-default">
@@ -37,7 +37,7 @@ function App() {
             <Nintendowcspiller />
           </div>
 
-          <div className="grid grid-cols-3 justify-between text-2xl">
+          <div className="grid h-full grid-cols-3 justify-between text-2xl">
             <div className="m-4 mt-12 ml-12 flex">
               <ul>
                 {data.scores
@@ -60,7 +60,7 @@ function App() {
               </ul>
             </div>
             <div className="p-4 flex flex-col ">
-              <div className="flex h-2/4 w-full flex-row justify-center">
+              <div className="flex h-96 w-full flex-row justify-center">
                 {data.scores
                   .sort(function (a, b) {
                     return a.ranking - b.ranking;
@@ -80,7 +80,7 @@ function App() {
                     )
                   )}
               </div>
-              <div className="flex h-1/4 w-full flex-row justify-center">
+              <div className="flex w-full flex-row justify-center h-80">
                 {data.scores
                   .sort(function (a, b) {
                     return a.ranking - b.ranking;
@@ -91,7 +91,7 @@ function App() {
                       <img
                         key={item.name}
                         onClick={playRandomSound}
-                        className="h-full"
+                        className=""
                         src={`/profiles/card/${item.name
                           .toLowerCase()
                           .replace(/\s/g, "")}.png`}
@@ -100,7 +100,7 @@ function App() {
                     )
                   )}
               </div>
-              <div className="flex h-1/5 w-full flex-row items-center">
+              <div className="flex h-72 w-full flex-row items-center">
                 {data.scores
                   .sort(function (a, b) {
                     return a.ranking - b.ranking;
