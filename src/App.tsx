@@ -37,7 +37,7 @@ function App() {
             <Nintendowcspiller />
           </div>
 
-          <div className="grid  grid-cols-3 justify-between text-2xl">
+          <div className="grid grid-cols-3 justify-between text-2xl">
             <div className="m-4 mt-12 ml-12 flex">
               <ul>
                 {data.scores
@@ -59,7 +59,7 @@ function App() {
                   )}
               </ul>
             </div>
-            <div className="m-4 flex h-full flex-col ">
+            <div className="p-4 flex flex-col ">
               <div className="flex h-2/4 w-full flex-row justify-center">
                 {data.scores
                   .sort(function (a, b) {
@@ -152,7 +152,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="flex h-14 w-full items-center justify-between self-end text-wcbeige-default">
+          <div className="flex w-full items-center justify-between self-end text-wcbeige-default">
             <Oklogo />
             <span className="text-center">Sist oppdatert: 23.11.22</span>
             <Wclogo />
