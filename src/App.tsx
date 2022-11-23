@@ -91,7 +91,7 @@ function App() {
                       <img
                         key={item.name}
                         onClick={playRandomSound}
-                        className=""
+                        className="h-full"
                         src={`/profiles/card/${item.name
                           .toLowerCase()
                           .replace(/\s/g, "")}.png`}
@@ -108,7 +108,7 @@ function App() {
                   .filter((score) => score.ranking === 3)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
-                      <div key={item.name} className="">
+                      <div key={item.name} className="h-full">
                         <img
                           onClick={playRandomSound}
                           className=""
