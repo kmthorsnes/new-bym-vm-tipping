@@ -16,6 +16,8 @@ import Wclogo from "./wclogo/Wclogo";
 import fart from "././assets/sounds/fart.mp3";
 import perfectfart from "././assets/sounds/perfect-fart.mp3";
 import su from "././assets/sounds/cr_suuu.mp3";
+import SisteResultater from "./siste-resultater/SisteResultater";
+import NesteKamper from "./neste-kamper/NesteKamper";
 
 const playRandomSound = () => {
   const sounds = [fart, perfectfart, su];
@@ -59,7 +61,7 @@ function App() {
                   )}
               </ul>
             </div>
-            <div className="p-4 flex flex-col ">
+            <div className="flex flex-col p-4 ">
               <div className="flex h-96 w-full flex-row justify-center">
                 {data.scores
                   .sort(function (a, b) {
@@ -80,7 +82,7 @@ function App() {
                     )
                   )}
               </div>
-              <div className="flex w-full flex-row justify-center h-80">
+              <div className="flex h-80 w-full flex-row justify-center">
                 {data.scores
                   .sort(function (a, b) {
                     return a.ranking - b.ranking;
@@ -125,24 +127,10 @@ function App() {
 
             <div className="mt-12 ml-12 flex flex-col">
               <div className="m-4 ">
-                <p>
-                  <strong>Siste resultater:</strong>
-                </p>
-                <ul>
-                  <li>Marokko 0 - 0 Kroatia</li>
-
-                </ul>
+                <SisteResultater />
               </div>
               <div className="m-4">
-                <p>
-                  <strong>Neste kamper:</strong>
-                </p>
-                <ul>
-                  
-                  <li>14:00 : Tyskland - Japan</li>
-                  <li>17:00 : Spania - Costa Rica</li>
-                  <li>20:00 : Belgia - Canada</li>
-                </ul>
+                <NesteKamper />
               </div>
             </div>
           </div>
