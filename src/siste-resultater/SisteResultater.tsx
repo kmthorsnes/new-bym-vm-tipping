@@ -1,3 +1,5 @@
+import SisteResultatKort from "./SisteResultatKort";
+
 const SisteResultater = () => {
   return (
     <table className="table-auto">
@@ -9,25 +11,13 @@ const SisteResultater = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td className="">Sveits - Kamerun</td>
-          <td className="pl-2">1 - 0</td>
-        </tr>
-        <tr>
-          <td className="">Uruguay - Sør-Korea</td>
-          <td className="pl-2">0 - 0</td>
-        </tr>
-        <tr>
-          <td className="">Portugal - Ghana</td>
-          <td className="pl-2"></td>
-        </tr>
-        <tr>
-          <td className="">Brasil - Serbia</td>
-          <td className="pl-2"></td>
-        </tr>
-
+        <SisteResultatKort hjemmelag="Sveits" hjemmelagScore={1} bortelag="Kamerun" bortelagScore={0} />
+        <SisteResultatKort hjemmelag="Uruguay" hjemmelagScore={0} bortelag="Sør-Korea" bortelagScore={0} />
+        <SisteResultatKort hjemmelag="Portugal" hjemmelagScore={2} bortelag="Ghana" bortelagScore={1} />
+        <SisteResultatKort hjemmelag="Brasil" hjemmelagScore={0} bortelag="Serbia" bortelagScore={0} />
       </tbody>
     </table>
   );
+
 };
 export default SisteResultater;

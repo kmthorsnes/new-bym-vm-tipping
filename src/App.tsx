@@ -30,8 +30,8 @@ const playRandomSound = () => {
 function App() {
   return (
     <div className="App">
-      <div className="flex h-screen flex-col p-2">
-        <div className="border-red-600 flex h-full w-full max-w-full flex-col rounded border-4 border-wcbeige-default p-2 ">
+      <div className="flex min-h-screen flex-col p-2">
+        <div className="border-red-600 flex h-full min-h-screen w-full max-w-full flex-col rounded border-4 border-wcbeige-default p-2 ">
           <div className="flex w-full justify-between justify-items-end">
             <TakeMyMoney />
             <div className="flex text-center text-5xl text-wcbeige-default">
