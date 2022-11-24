@@ -10,21 +10,22 @@ const SisteResultater = () => {
       </thead>
       <tbody>
         <tr>
-          <td className="">Marokko - Kroatia</td>
+          <td className="">Sveits - Kamerun</td>
+          <td className="pl-2">1 - 0</td>
+        </tr>
+        <tr>
+          <td className="">Uruguay - Sør-Korea</td>
           <td className="pl-2">0 - 0</td>
         </tr>
         <tr>
-          <td className="">Tyskland - Japan</td>
-          <td className="pl-2">1 - 2</td>
+          <td className="">Portugal - Ghana</td>
+          <td className="pl-2"></td>
         </tr>
         <tr>
-          <td className="">Spania - Costa Rica</td>
-          <td className="pl-2">7 - 0</td>
+          <td className="">Brasil - Serbia</td>
+          <td className="pl-2"></td>
         </tr>
-        <tr>
-          <td className="">Marokko - Kroatia</td>
-          <td className="pl-2">0 - 0</td>
-        </tr>
+
       </tbody>
     </table>
   );

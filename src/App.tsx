@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <div className="flex h-screen flex-col p-2">
-        <div className="border-red-600 flex h-fullw-full max-w-full flex-col rounded border-4 border-wcbeige-default p-2 ">
+        <div className="border-red-600 flex h-full w-full max-w-full flex-col rounded border-4 border-wcbeige-default p-2 ">
           <div className="flex w-full justify-between justify-items-end">
             <TakeMyMoney />
             <div className="flex text-center text-5xl text-wcbeige-default">
@@ -44,8 +44,8 @@ function App() {
             <div className="m-4 phablet:mt-12 phablet:ml-12 mobile-only:w-full w-1/3">
               <Resultatliste />
             </div>
-            <div className="flex flex-col w-1/3 mobile-only:w-full h-full p-4 ">
-              <div className="flex h-2/4 w-full flex-shrink flex-row items-center justify-center">
+            <div className="flex flex-col w-1/3 mobile-only:w-full h-full p-4  items-center ">
+              <div className="flex w-full flex-shrink flex-row items-center justify-center">
                 {data.scores
                   .sort(function (a, b) {
                     return a.ranking - b.ranking;
@@ -53,11 +53,11 @@ function App() {
                   .filter((score) => score.ranking === 1)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
-                      <div className="object-fit ">
+                      <div className="object-fit w-full flex justify-center">
                       <img
                         key={item.name}
                         onClick={playRandomSound}
-                        className="h-auto w-auto"
+                        className="h-60 w-auto"
                         src={`/profiles/card/${item.name
                           .toLowerCase()
                           .replace(/\s/g, "")}.png`}
@@ -67,7 +67,7 @@ function App() {
                     )
                   )}
               </div>
-              <div className="flex h-1/4 w-full flex-shrink flex-row ">
+              <div className="flex w-full flex-shrink flex-row ">
               {data.scores
                   .sort(function (a, b) {
                     return a.ranking - b.ranking;
@@ -75,11 +75,11 @@ function App() {
                   .filter((score) => score.ranking === 3)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
-                      <div className="object-fit flex justify-center">
+                      <div className="object-fit w-full flex justify-center ">
                       <img
                         key={item.name}
                         onClick={playRandomSound}
-                        className="h-auto w-auto"
+                        className="h-40 w-auto"
                         src={`/profiles/card/${item.name
                           .toLowerCase()
                           .replace(/\s/g, "")}.png`}
@@ -89,7 +89,7 @@ function App() {
                     )
                   )}
               </div>
-              <div className="flex h-1/5 w-full mobile-only:w-full flex-row items-center">
+              <div className="flex  w-full mobile-only:w-full flex-row items-center">
                 {data.scores
                   .sort(function (a, b) {
                     return a.ranking - b.ranking;
@@ -97,10 +97,10 @@ function App() {
                   .filter((score) => score.ranking === 4)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
-                      <div key={item.name} className="h-full">
+                      <div key={item.name} className="object-fit w-full flex justify-center">
                         <img
                           onClick={playRandomSound}
-                          className=""
+                          className="h-30"
                           src={`/profiles/card/${item.name
                             .toLowerCase()
                             .replace(/\s/g, "")}.png`}

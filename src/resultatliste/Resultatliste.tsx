@@ -7,11 +7,11 @@ const Resultatliste = () => {
     <table className="table-auto">
       <thead>
         <tr>
-          <th className="">Siste resultater:</th>
+          <th className="text-left">Siste resultater:</th>
         </tr>
         <tr>
-          <th className="text-sm">
-            # Navn - Poeng - (Poeng samlet forrige spilldag)
+          <th className="text-xs text-left ">
+            # Navn: Poeng (Poeng samlet forrige spilldag)
           </th>
         </tr>
       </thead>
