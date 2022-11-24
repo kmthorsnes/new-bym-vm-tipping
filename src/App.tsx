@@ -18,6 +18,7 @@ import perfectfart from "././assets/sounds/perfect-fart.mp3";
 import su from "././assets/sounds/cr_suuu.mp3";
 import SisteResultater from "./siste-resultater/SisteResultater";
 import NesteKamper from "./neste-kamper/NesteKamper";
+import Resultatliste from "./resultatliste/ResultatListe";
 
 const playRandomSound = () => {
   const sounds = [fart, perfectfart, su];
@@ -30,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <div className="flex h-screen flex-col p-2">
-        <div className="border-red-600 flex h-full  w-full max-w-full flex-col rounded border-4 border-wcbeige-default p-2 ">
+        <div className="border-red-600 flex h-fullw-full max-w-full flex-col rounded border-4 border-wcbeige-default p-2 ">
           <div className="flex w-full justify-between justify-items-end">
             <TakeMyMoney />
             <div className="flex text-center text-5xl text-wcbeige-default">
@@ -39,30 +40,12 @@ function App() {
             <Nintendowcspiller />
           </div>
 
-          <div className="grid h-full grid-cols-3 justify-between text-2xl">
-            <div className="m-4 mt-12 ml-12 flex">
-              <ul>
-                {data.scores
-                  .sort(function (a, b) {
-                    return a.ranking - b.ranking;
-                  })
-                  .map(
-                    (item: {
-                      name: string;
-                      ranking: number;
-                      score: Array<Number> | any;
-                    }) => (
-                      <li key={item.name}>
-                        {item.ranking}. {item.name}:{" "}
-                        {item.score.reduce((a: number, b: number) => a + b, 0)}{" "}
-                        ({item.score[item.score.length - 1]})
-                      </li>
-                    )
-                  )}
-              </ul>
+          <div className="h-full flex mobile-only:flex-col flex-row w-full justify-between text-2xl">
+            <div className="m-4 phablet:mt-12 phablet:ml-12 mobile-only:w-full w-1/3">
+              <Resultatliste />
             </div>
-            <div className="flex flex-col p-4 ">
-              <div className="flex h-96 w-full flex-row justify-center">
+            <div className="flex flex-col w-1/3 mobile-only:w-full h-full p-4 ">
+              <div className="flex h-2/4 w-full flex-shrink flex-row items-center justify-center">
                 {data.scores
                   .sort(function (a, b) {
                     return a.ranking - b.ranking;
@@ -70,39 +53,43 @@ function App() {
                   .filter((score) => score.ranking === 1)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
+                      <div className="object-fit ">
                       <img
                         key={item.name}
                         onClick={playRandomSound}
-                        className="h-full"
+                        className="h-auto w-auto"
                         src={`/profiles/card/${item.name
                           .toLowerCase()
                           .replace(/\s/g, "")}.png`}
                         alt=""
                       />
+                      </div>
                     )
                   )}
               </div>
-              <div className="flex h-80 w-full flex-row justify-center">
-                {data.scores
+              <div className="flex h-1/4 w-full flex-shrink flex-row ">
+              {data.scores
                   .sort(function (a, b) {
                     return a.ranking - b.ranking;
                   })
                   .filter((score) => score.ranking === 3)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
+                      <div className="object-fit flex justify-center">
                       <img
                         key={item.name}
                         onClick={playRandomSound}
-                        className="h-full"
+                        className="h-auto w-auto"
                         src={`/profiles/card/${item.name
                           .toLowerCase()
                           .replace(/\s/g, "")}.png`}
                         alt=""
                       />
+                      </div>
                     )
                   )}
               </div>
-              <div className="flex h-72 w-full flex-row items-center">
+              <div className="flex h-1/5 w-full mobile-only:w-full flex-row items-center">
                 {data.scores
                   .sort(function (a, b) {
                     return a.ranking - b.ranking;
@@ -125,7 +112,7 @@ function App() {
               </div>
             </div>
 
-            <div className="mt-12 ml-12 flex flex-col">
+            <div className="phablet:mt-12 phablet:ml-12 flex mobile-only:w-full w-1/3 flex-col">
               <div className="m-4 ">
                 <SisteResultater />
               </div>

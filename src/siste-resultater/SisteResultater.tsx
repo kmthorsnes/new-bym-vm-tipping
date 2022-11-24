@@ -23,6 +23,7 @@ const SisteResultater = () => {
         </tr>
         <tr>
           <td className="">Marokko - Kroatia</td>
+          <td className="pl-2">0 - 0</td>
         </tr>
       </tbody>
     </table>
