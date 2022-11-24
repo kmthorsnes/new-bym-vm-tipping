@@ -18,7 +18,7 @@ import perfectfart from "././assets/sounds/perfect-fart.mp3";
 import su from "././assets/sounds/cr_suuu.mp3";
 import SisteResultater from "./siste-resultater/SisteResultater";
 import NesteKamper from "./neste-kamper/NesteKamper";
-import Resultatliste from "./resultatliste/ResultatListe";
+import Resultatliste from "./resultatliste/Resultatliste";
 
 const playRandomSound = () => {
   const sounds = [fart, perfectfart, su];
