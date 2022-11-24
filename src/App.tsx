@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <div className="flex min-h-screen flex-col p-2">
-        <div className="border-red-600 flex h-full min-h-screen w-full max-w-full flex-col rounded border-4 border-wcbeige-default p-2 ">
+        <div className="border-red-600 flex h-full min-h-screen w-full max-w-full flex-col rounded border-4 items-start border-wcbeige-default p-2 ">
           <div className="flex w-full justify-between justify-items-end">
             <TakeMyMoney />
             <div className="flex text-center text-5xl text-wcbeige-default">
@@ -74,14 +74,14 @@ function App() {
                   .sort(function (a, b) {
                     return a.ranking - b.ranking;
                   })
-                  .filter((score) => score.ranking === 3)
+                  .filter((score) => score.ranking === 2)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
                       <div key={item.name} className="object-fit flex w-full justify-center ">
                         <img
 
                           onClick={playRandomSound}
-                          className="h-40 w-auto"
+                          className="h-52 w-auto"
                           src={`/profiles/card/${item.name
                             .toLowerCase()
                             .replace(/\s/g, "")}.png`}
@@ -91,21 +91,19 @@ function App() {
                     )
                   )}
               </div>
-              <div className="flex  w-full flex-row items-center mobile-only:w-full">
+              <div className="flex w-full flex-shrink flex-row ">
                 {data.scores
                   .sort(function (a, b) {
                     return a.ranking - b.ranking;
                   })
-                  .filter((score) => score.ranking === 4)
+                  .filter((score) => score.ranking === 3)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
-                      <div
-                        key={item.name}
-                        className="object-fit flex w-full justify-center"
-                      >
+                      <div key={item.name} className="object-fit flex w-full justify-center ">
                         <img
+
                           onClick={playRandomSound}
-                          className="h-30"
+                          className="h-44 w-auto"
                           src={`/profiles/card/${item.name
                             .toLowerCase()
                             .replace(/\s/g, "")}.png`}
@@ -126,9 +124,9 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="flex w-full items-center justify-between self-end text-wcbeige-default">
+          <div className="flex w-full items-stretch justify-between self-end text-wcbeige-default">
             <Oklogo />
-            <span className="text-center">Sist oppdatert: 23.11.22</span>
+            <span className="text-center">Sist oppdatert: 25.11.22</span>
             <Wclogo />
           </div>
         </div>
