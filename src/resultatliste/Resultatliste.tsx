@@ -3,6 +3,11 @@ import data from "../data/data.json";
 const howMany:number = 4;
 
 
+  let numberOfPlayers = data.scores.length;
+  console.log('Antall spillere:' + numberOfPlayers);
+
+
+
 const Resultatliste = () => {
   return (
     <table className="table-auto">
@@ -28,9 +33,9 @@ const Resultatliste = () => {
               ranking: number;
               score: Array<Number> | any;
             }) => (
-              <tr>
-                <td key={item.name}>
-                  Plass. {item.name}:{" "}
+              <tr key={item.name}>
+                <td>
+                  {item.ranking} {item.name}:{" "}
                   {item.score.reduce((a: number, b: number) => a + b, 0)} (
                   {item.score.slice(-howMany).reduce((acc:number, val:number) => acc + val)})
                 </td>
