@@ -2,7 +2,7 @@
   "scores": [
     {
       "name": "Blend",
-      "score": [0,0,0,0,0,0,0,1,1],
+      "score": [0,0,0,0,0,0,0,1,1,0,0,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -20,7 +20,7 @@
     },
     {
       "name": "Caroline",
-      "score": [0,0,1,0,0,0,0,1,1],
+      "score": [0,0,1,0,0,0,0,1,1,0,1,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Cilje",
-      "score": [1,0,1,1],
+      "score": [1,0,1,1,1,1,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Dag",
-      "score": [1,1,0,0,1,0,0,1,1],
+      "score": [1,1,0,0,1,0,0,1,1,0,1,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Finn Erik",
-      "score": [0,1,0,0,0,0,0,0,1],
+      "score": [0,1,0,0,0,0,0,0,1,1,0,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -92,7 +92,7 @@
     },
     {
       "name": "Guled",
-      "score": [0,1,1,0,0,0,0,1,1],
+      "score": [0,1,1,0,0,0,0,1,1,1,0,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -110,7 +110,7 @@
     },
     {
       "name": "Hans Erling",
-      "score": [1,1,1,0,0,0,0,1,1],
+      "score": [1,1,1,0,0,0,0,1,1,0,0,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -127,7 +127,7 @@
       }
     },{
       "name": "Ingunn",
-      "score": [0,1,1,0,0,0,0,1,1],
+      "score": [0,1,1,0,0,0,0,1,1,1,0,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -145,7 +145,7 @@
     },
     {
       "name": "Kalle",
-      "score": [1,1,1,0,3,0,0,1,1],
+      "score": [1,1,1,0,3,0,0,1,1,1,1,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -163,7 +163,7 @@
     },
     {
       "name": "Samir",
-      "score": [1,1,1,0,1,0,0,1,1],
+      "score": [1,1,1,0,1,0,0,1,1,0,0,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -181,7 +181,7 @@
     },
     {
       "name": "Torgeir",
-      "score": [0,1,1,1,0,3,0,1,1],
+      "score": [0,1,1,1,0,3,0,1,1,0,0,0],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -199,7 +199,7 @@
     },
     {
       "name": "William",
-      "score": [0,1,1,0,1,0,0,1,1],
+      "score": [0,1,1,0,1,0,0,1,1,3,0,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,

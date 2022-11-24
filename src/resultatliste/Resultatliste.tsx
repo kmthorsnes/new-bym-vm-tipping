@@ -2,6 +2,7 @@ import data from "../data/data.json";
 
 const howMany:number = 4;
 
+
 const Resultatliste = () => {
   return (
     <table className="table-auto">
@@ -18,7 +19,8 @@ const Resultatliste = () => {
       <tbody>
         {data.scores
           .sort(function (a, b) {
-            return a.ranking - b.ranking;
+            return b.score.reduce((a: number, b: number) => a + b, 0)
+            - a.score.reduce((a: number, b: number) => a + b, 0);
           })
           .map(
             (item: {
@@ -28,7 +30,7 @@ const Resultatliste = () => {
             }) => (
               <tr>
                 <td key={item.name}>
-                  {item.ranking}. {item.name}:{" "}
+                  Plass. {item.name}:{" "}
                   {item.score.reduce((a: number, b: number) => a + b, 0)} (
                   {item.score.slice(-howMany).reduce((acc:number, val:number) => acc + val)})
                 </td>
