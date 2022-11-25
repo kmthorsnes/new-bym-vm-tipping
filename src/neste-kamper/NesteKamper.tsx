@@ -11,14 +11,14 @@ const NesteKamper = () => {
         </tr>
       </thead>
       <tbody>
-        <NestekampKort tidspunkt="11:00" hjemmelag="Wales" bortelag="Iran" />
-        <NestekampKort tidspunkt="14:00" hjemmelag="Qatar" bortelag="Senegal" />
+        <NestekampKort tidspunkt="11:00" hjemmelag="Tunisia" bortelag="Australia" />
+        <NestekampKort tidspunkt="14:00" hjemmelag="Polen" bortelag="Saudi-Arabia" />
         <NestekampKort
           tidspunkt="17:00"
-          hjemmelag="Nederland"
-          bortelag="Ecuador"
+          hjemmelag="Frankrike"
+          bortelag="Danmark"
         />
-        <NestekampKort tidspunkt="20:00" hjemmelag="England" bortelag="Usa" />
+        <NestekampKort tidspunkt="20:00" hjemmelag="Argentina" bortelag="Mexico" />
       </tbody>
     </table>
   );

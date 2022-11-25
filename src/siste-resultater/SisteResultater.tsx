@@ -11,10 +11,10 @@ const SisteResultater = () => {
         </tr>
       </thead>
       <tbody>
-        <SisteResultatKort hjemmelag="Sveits" hjemmelagScore={1} bortelag="Kamerun" bortelagScore={0} />
-        <SisteResultatKort hjemmelag="Uruguay" hjemmelagScore={0} bortelag="Sør-Korea" bortelagScore={0} />
-        <SisteResultatKort hjemmelag="Portugal" hjemmelagScore={3} bortelag="Ghana" bortelagScore={2} />
-        <SisteResultatKort hjemmelag="Brasil" hjemmelagScore={2} bortelag="Serbia" bortelagScore={0} />
+        <SisteResultatKort hjemmelag="Wales" hjemmelagScore={0} bortelag="Iran" bortelagScore={2} />
+        <SisteResultatKort hjemmelag="Qatar" hjemmelagScore={1} bortelag="Senegal" bortelagScore={3} />
+        <SisteResultatKort hjemmelag="Nederland" hjemmelagScore={1} bortelag="Ecuador" bortelagScore={1} />
+        <SisteResultatKort hjemmelag="England" hjemmelagScore={0} bortelag="Usa" bortelagScore={0} />
       </tbody>
     </table>
   );
