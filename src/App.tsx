@@ -40,7 +40,7 @@ function App() {
             <Nintendowcspiller />
           </div>
 
-          <div className="flex h-full w-full flex-row justify-between text-2xl mobile-only:flex-col">
+          <div className="flex grow h-full w-full flex-row justify-between text-2xl mobile-only:flex-col">
             <div className="m-4 w-1/3 mobile-only:w-full phablet:mt-12 phablet:ml-12">
               <Resultatliste />
             </div>
@@ -55,7 +55,7 @@ function App() {
                     (item: { name: string; ranking: number; imgUrl: any }) => (
                       <div
                         key={item.name}
-                        className="object-fit flex w-full justify-center"
+                        className="object-fit flex w-full justify-center transform transition duration-500 hover:scale-110"
                       >
                         <img
                           onClick={playRandomSound}
@@ -77,9 +77,8 @@ function App() {
                   .filter((score) => score.ranking === 2)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
-                      <div key={item.name} className="object-fit flex w-full justify-center ">
+                      <div key={item.name} className="object-fit flex w-full justify-center transform transition duration-500 hover:scale-110">
                         <img
-
                           onClick={playRandomSound}
                           className="h-52 w-auto"
                           src={`/profiles/card/${item.name
@@ -99,7 +98,7 @@ function App() {
                   .filter((score) => score.ranking === 3)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
-                      <div key={item.name} className="object-fit flex w-full justify-center ">
+                      <div key={item.name} className="object-fit flex w-full justify-center transform transition duration-500 hover:scale-110">
                         <img
 
                           onClick={playRandomSound}
