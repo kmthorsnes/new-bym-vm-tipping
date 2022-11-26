@@ -2,7 +2,7 @@
   "scores": [
     {
       "name": "Blend",
-      "score": [0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,1,3,0,3],
+      "score": [0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,1,3,0,3,0],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -20,7 +20,7 @@
     },
     {
       "name": "Caroline",
-      "score": [0,0,1,0,0,0,0,1,1,0,1,1,1,0,1,0,1,0,0,3],
+      "score": [0,0,1,0,0,0,0,1,1,0,1,1,1,0,1,0,1,0,0,3,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -29,7 +29,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 9,
+      "ranking": 8,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/caroline.png",
         "card": "/src/assets/images/profiles/card/caroline.png",
@@ -38,7 +38,7 @@
     },
     {
       "name": "Cilje",
-      "score": [1,0,1,1,1,1,1,1,0,1,0,1,1,0,1],
+      "score": [1,0,1,1,1,1,1,1,0,1,0,1,1,0,1,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -56,7 +56,7 @@
     },
     {
       "name": "Dag",
-      "score": [1,1,0,0,1,0,0,1,1,0,1,1,1,0,0,0,3,0,0,0],
+      "score": [1,1,0,0,1,0,0,1,1,0,1,1,1,0,0,0,3,0,0,0,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -65,7 +65,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 3,
+      "ranking": 8,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/dag.png",
         "badge": "/src/assets/images/profiles/background/dag.png",
@@ -74,7 +74,7 @@
     },
     {
       "name": "Finn Erik",
-      "score": [0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,1,3,0,0],
+      "score": [0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,1,3,0,0,0],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -83,7 +83,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 11,
+      "ranking": 12,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/finnerik.png",
         "badge": "/src/assets/images/profiles/background/finnerik.png",
@@ -92,7 +92,7 @@
     },
     {
       "name": "Guled",
-      "score": [0,1,1,0,0,0,0,1,1,1,0,1,1,0,0,0,1,3,0,1],
+      "score": [0,1,1,0,0,0,0,1,1,1,0,1,1,0,0,0,1,3,0,1,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -101,7 +101,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 9,
+      "ranking": 6,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/guled.png",
         "badge": "/src/assets/images/profiles/background/guled.png",
@@ -110,7 +110,7 @@
     },
     {
       "name": "Hans Erling",
-      "score": [1,1,1,0,0,0,0,1,1,0,0,1,1,0,0,0,3,3,0,0],
+      "score": [1,1,1,0,0,0,0,1,1,0,0,1,1,0,0,0,3,3,0,0,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -119,7 +119,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 5,
+      "ranking": 4,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/hanserling.png",
         "badge": "/src/assets/images/profiles/background/hanserling.png",
@@ -127,7 +127,7 @@
       }
     },{
       "name": "Ingunn",
-      "score": [0,1,1,0,0,0,0,1,1,1,0,1,1,0,0,1,3,1,0,1],
+      "score": [0,1,1,0,0,0,0,1,1,1,0,1,1,0,0,1,3,1,0,1,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -136,7 +136,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 3,
+      "ranking": 4,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/ingunn.png",
         "badge": "/src/assets/images/profiles/background/ingunn.png",
@@ -145,7 +145,7 @@
     },
     {
       "name": "Kalle",
-      "score": [1,1,1,0,3,0,0,1,1,1,1,1,3,3,0,3,1,3,0,3],
+      "score": [1,1,1,0,3,0,0,1,1,1,1,1,3,3,0,3,1,3,0,3,3],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -163,7 +163,7 @@
     },
     {
       "name": "Samir",
-      "score": [1,1,1,0,1,0,0,1,1,0,0,1,1,1,0,0,1,1,0,1],
+      "score": [1,1,1,0,1,0,0,1,1,0,0,1,1,1,0,0,1,1,0,1,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -172,7 +172,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 5,
+      "ranking": 6,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/samir.png",
         "badge": "/src/assets/images/profiles/background/samir.png",
@@ -181,7 +181,7 @@
     },
     {
       "name": "Torgeir",
-      "score": [0,1,1,1,0,3,0,1,1,0,0,0,1,0,0,0,1,3,3,1],
+      "score": [0,1,1,1,0,3,0,1,1,0,0,0,1,0,0,0,1,3,3,1,1],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,
@@ -190,7 +190,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 5,
+      "ranking": 2,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/torgeir.png",
         "badge": "/src/assets/images/profiles/background/torgeir.png",
@@ -199,7 +199,7 @@
     },
     {
       "name": "William",
-      "score": [0,1,1,0,1,0,0,1,1,3,0,1,3,0,0,0,1,1,0,1],
+      "score": [0,1,1,0,1,0,0,1,1,3,0,1,3,0,0,0,1,1,0,1,3],
       "lastScore": 0,
       "groupStage": 0,
       "gsStandings": 0,

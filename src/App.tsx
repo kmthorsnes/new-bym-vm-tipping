@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <div className="flex min-h-screen flex-col p-2">
-        <div className="border-red-600 flex h-full min-h-screen w-full max-w-full flex-col rounded border-4 items-start border-wcbeige-default p-2 ">
+        <div className="border-red-600 flex h-full min-h-screen w-full max-w-full flex-col items-start rounded border-4 border-wcbeige-default p-2 ">
           <div className="flex w-full justify-between justify-items-end">
             <TakeMyMoney />
             <div className="flex text-center text-5xl text-wcbeige-default">
@@ -40,7 +40,7 @@ function App() {
             <Nintendowcspiller />
           </div>
 
-          <div className="flex grow h-full w-full flex-row justify-between text-2xl mobile-only:flex-col">
+          <div className="flex h-full w-full grow flex-row justify-between text-2xl mobile-only:flex-col">
             <div className="m-4 w-1/3 mobile-only:w-full phablet:mt-12 phablet:ml-12">
               <Resultatliste />
             </div>
@@ -55,7 +55,7 @@ function App() {
                     (item: { name: string; ranking: number; imgUrl: any }) => (
                       <div
                         key={item.name}
-                        className="object-fit flex w-full justify-center transform transition duration-500 hover:scale-110"
+                        className="object-fit flex w-full transform justify-center transition duration-500 hover:scale-110"
                       >
                         <img
                           onClick={playRandomSound}
@@ -77,7 +77,10 @@ function App() {
                   .filter((score) => score.ranking === 2)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
-                      <div key={item.name} className="object-fit flex w-full justify-center transform transition duration-500 hover:scale-110">
+                      <div
+                        key={item.name}
+                        className="object-fit flex w-full transform justify-center transition duration-500 hover:scale-110"
+                      >
                         <img
                           onClick={playRandomSound}
                           className="h-52 w-auto"
@@ -95,12 +98,14 @@ function App() {
                   .sort(function (a, b) {
                     return a.ranking - b.ranking;
                   })
-                  .filter((score) => score.ranking === 3)
+                  .filter((score) => score.ranking === 4)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
-                      <div key={item.name} className="object-fit flex w-full justify-center transform transition duration-500 hover:scale-110">
+                      <div
+                        key={item.name}
+                        className="object-fit flex w-full transform justify-center transition duration-500 hover:scale-110"
+                      >
                         <img
-
                           onClick={playRandomSound}
                           className="h-44 w-auto"
                           src={`/profiles/card/${item.name

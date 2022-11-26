@@ -6,7 +6,7 @@ const SisteResultatKort = (props: {
 }): JSX.Element => {
   return (
     <tr>
-      <td className="pl-2">
+      <td className="">
         {props.hjemmelag} {props.hjemmelagScore} - {props.bortelagScore} {props.bortelag}
       </td>
     </tr>

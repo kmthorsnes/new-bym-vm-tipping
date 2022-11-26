@@ -14,7 +14,7 @@ const SisteResultater = () => {
         <SisteResultatKort hjemmelag="Tunisia" hjemmelagScore={0} bortelag="Australia" bortelagScore={1} />
         <SisteResultatKort hjemmelag="Polen" hjemmelagScore={2} bortelag="Saudi-Arabia" bortelagScore={0} />
         <SisteResultatKort hjemmelag="Frankrike" hjemmelagScore={2} bortelag="Danmark" bortelagScore={1} />
-        <SisteResultatKort hjemmelag="Argentina" hjemmelagScore={0} bortelag="Mexico" bortelagScore={0} />
+        <SisteResultatKort hjemmelag="Argentina" hjemmelagScore={2} bortelag="Mexico" bortelagScore={0} />
       </tbody>
     </table>
   );
