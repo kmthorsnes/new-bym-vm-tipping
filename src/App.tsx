@@ -98,7 +98,7 @@ function App() {
                   .sort(function (a, b) {
                     return a.ranking - b.ranking;
                   })
-                  .filter((score) => score.ranking === 4)
+                  .filter((score) => score.ranking === 3)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
                       <div
@@ -130,7 +130,7 @@ function App() {
           </div>
           <div className="flex w-full items-stretch justify-between self-end text-wcbeige-default">
             <Oklogo />
-            <span className="text-center">Sist oppdatert: 25.11.22</span>
+            <span className="text-center">Sist oppdatert: 27.11.22</span>
             <Wclogo />
           </div>
         </div>
