@@ -11,7 +11,7 @@ const NesteKamper = () => {
         </tr>
       </thead>
       <tbody>
-        <NestekampKort tidspunkt="11:00" hjemmelag="Kamarun" bortelag="Serbia" />
+        <NestekampKort tidspunkt="11:00" hjemmelag="Kamerun" bortelag="Serbia" />
         <NestekampKort tidspunkt="14:00" hjemmelag="Sør Korea" bortelag="Ghana" />
         <NestekampKort
           tidspunkt="17:00"
