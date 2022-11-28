@@ -5,7 +5,7 @@ const SisteResultater = () => {
     <table className="table-auto">
       <thead>
         <tr>
-          <th colSpan={2} className="text-left">
+          <th colSpan={2} className="text-3xl text-left">
             Siste resultater:
           </th>
         </tr>

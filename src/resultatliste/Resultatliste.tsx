@@ -7,7 +7,7 @@ const Resultatliste = () => {
     <table className="table-auto">
       <thead>
         <tr>
-          <th className="text-left">Siste resultater:</th>
+          <th className="text-left text-3xl">Siste poeng:</th>
         </tr>
         <tr>
           <th className="text-left text-xs ">

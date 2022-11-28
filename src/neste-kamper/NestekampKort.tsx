@@ -7,15 +7,15 @@ const NestekampKort = (props: {
   prediksjonB: string;
 }): JSX.Element => {
   return (
-    <div className="flex">
-      <div className="flex w-full">{props.tidspunkt}:</div>
-      <div className="flex w-full">{props.hjemmelag}</div>
-      <div className="flex w-full">-</div>
-      <div className="flex w-full">{props.bortelag}</div>
-      <div className="flex w-1/4">🔮</div>
-      <div className="flex w-1/4">{props.prediksjonH}%</div>
-      <div className="flex w-1/4"> {props.prediksjonU}%</div>
-      <div className="flex w-1/4">{props.prediksjonB}%</div>
+    <div className="grid grid-cols-4 grid-rows-2">
+      <div className="flex w-fit text-left">{props.tidspunkt}:</div>
+      <div className="flex w-full  font-medium  justify-center">{props.hjemmelag}</div>
+      <div className="flex w-full justify-center ">-</div>
+      <div className="flex w-full justify-center  font-medium ">{props.bortelag}</div>
+      <div className=" w-full text-sm ">🔮</div>
+      <div className="flex w-full justify-center text-sm">{props.prediksjonH}%</div>
+      <div className="flex w-full justify-center text-sm"> {props.prediksjonU}%</div>
+      <div className="flex w-full justify-center text-sm">{props.prediksjonB}%</div>
     </div>
   );
 };
