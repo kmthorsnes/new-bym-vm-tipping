@@ -55,7 +55,7 @@ function App() {
                     (item: { name: string; ranking: number; imgUrl: any }) => (
                       <div
                         key={item.name}
-                        className="object-fit flex w-full transform justify-center transition duration-500 hover:scale-110"
+                        className="object-fit flex w-full transform justify-center transition duration-500 hover:scale-110 cursor-pointer"
                       >
                         <img
                           title="IKKE KLIKK 😏"
@@ -80,7 +80,7 @@ function App() {
                     (item: { name: string; ranking: number; imgUrl: any }) => (
                       <div
                         key={item.name}
-                        className="object-fit flex w-full transform justify-center transition duration-500 hover:scale-110"
+                        className="object-fit flex w-full cursor-pointer transform justify-center transition duration-500 hover:scale-110"
                       >
                         <img
                           title="IKKE KLIKK 😏"
