@@ -58,6 +58,7 @@ function App() {
                         className="object-fit flex w-full transform justify-center transition duration-500 hover:scale-110"
                       >
                         <img
+                          title="IKKE KLIKK 😏"
                           onClick={playRandomSound}
                           className="h-60 w-auto"
                           src={`/profiles/card/${item.name
@@ -82,6 +83,7 @@ function App() {
                         className="object-fit flex w-full transform justify-center transition duration-500 hover:scale-110"
                       >
                         <img
+                          title="IKKE KLIKK 😏"
                           onClick={playRandomSound}
                           className="h-52 w-auto"
                           src={`/profiles/card/${item.name
@@ -102,8 +104,9 @@ function App() {
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
                       <div
+                        title="IKKE KLIKK 😏"
                         key={item.name}
-                        className="object-fit flex w-full transform justify-center transition duration-500 hover:scale-110"
+                        className="object-fit flex w-full transform cursor-pointer justify-center transition duration-500 hover:scale-110"
                       >
                         <img
                           onClick={playRandomSound}

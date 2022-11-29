@@ -14,10 +14,11 @@ const Nintendowcspiller = ({}): JSX.Element => {
   };
   return (
     <>
-      <div className="flex cursor-help">
+      <div className="flex cursor-pointer">
         <img
           className="h-14"
           src={player}
+          title="Spill av musikk"
           onClick={play}
           alt="nintendo world cup player"
         />

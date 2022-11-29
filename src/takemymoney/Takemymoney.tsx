@@ -8,12 +8,13 @@ const TakeMyMoney = ({}): JSX.Element => {
   };
   return (
     <>
-      <div className="flex cursor-help">
+      <div className="flex cursor-pointer">
         <img
           className="h-14"
           src={fry}
           onClick={start}
           alt="Shut up and take my money"
+          title="Shut up and take my money"
         />
       </div>
     </>
