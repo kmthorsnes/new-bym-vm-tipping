@@ -130,7 +130,7 @@ function App() {
           </div>
           <div className="flex w-full items-stretch justify-between self-end text-wcbeige-default">
             <Oklogo />
-            <span className="text-center">Sist oppdatert: 27.11.22</span>
+            <span className="text-center">Sist oppdatert: 29.11.22</span>
             <Wclogo />
           </div>
         </div>
