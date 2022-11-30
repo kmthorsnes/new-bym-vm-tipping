@@ -20,9 +20,9 @@ const NestekampKort = (props: {
         {props.bortelag}
       </div>
       <div className="w-full mt-2 text-sm ">🔮</div>
-      <div className="col-span-3 mt-2 flex">
+      <div className="col-span-3 mt-2 flex h-6">
         <div
-          className="text-white-default flex w-full justify-center items-center text-white rounded-l-lg bg-wcbeige-50 text-sm h-6 "
+          className="text-white-default flex w-full justify-center items-center text-white rounded-l-lg bg-wcbeige-50 text-sm"
           style={{ width: `${props.prediksjonH}%` }}
         >
           {props.prediksjonH}%
