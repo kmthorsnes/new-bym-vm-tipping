@@ -6,7 +6,7 @@ const NesteKamper = () => {
       <thead>
         <tr>
           <th colSpan={3} className="text-left text-3xl">
-            Neste kamper 30.11
+            Neste kamper 1.12
           </th>
         </tr>
       </thead>
