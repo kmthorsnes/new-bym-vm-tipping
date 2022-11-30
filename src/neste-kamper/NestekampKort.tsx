@@ -22,7 +22,7 @@ const NestekampKort = (props: {
       <div className="w-full mt-2 text-sm ">🔮</div>
       <div className="col-span-3 mt-2 flex">
         <div
-          className="text-white-default flex w-full justify-center items-center text-white rounded-l-lg bg-wcbeige-50 text-sm "
+          className="text-white-default flex w-full justify-center items-center text-white rounded-l-lg bg-wcbeige-50 text-sm h-6 "
           style={{ width: `${props.prediksjonH}%` }}
         >
           {props.prediksjonH}%
