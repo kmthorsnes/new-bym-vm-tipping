@@ -11,26 +11,38 @@ const NesteKamper = () => {
         </tr>
       </thead>
       <tbody>
-        <NestekampKort tidspunkt="16:00" hjemmelag="Tunisia" bortelag="Frankrike"
-        prediksjonH="8"
-        prediksjonU="0"
-        prediksjonB="92" />
-        <NestekampKort tidspunkt="16:00" hjemmelag="Australia" bortelag="Danmark"
-        prediksjonH="17"
-        prediksjonU="33"
-        prediksjonB="50" />
+        <NestekampKort
+          tidspunkt="16:00"
+          hjemmelag="Kroatia"
+          bortelag="Belgia"
+          prediksjonH="8"
+          prediksjonU="42"
+          prediksjonB="50"
+        />
+        <NestekampKort
+          tidspunkt="16:00"
+          hjemmelag="Canada"
+          bortelag=" Marokko"
+          prediksjonH="8"
+          prediksjonU="42"
+          prediksjonB="50"
+        />
         <NestekampKort
           tidspunkt="20:00"
-          hjemmelag="Polen"
-          bortelag="Argentina"
+          hjemmelag="Japan"
+          bortelag="Spania"
           prediksjonH="8"
-        prediksjonU="8"
-        prediksjonB="83"
+          prediksjonU="0"
+          prediksjonB="92"
         />
-        <NestekampKort tidspunkt="20:00" hjemmelag="Saudi-Arabia" bortelag="Mexico"
-        prediksjonH="17"
-        prediksjonU="42"
-        prediksjonB="42" />
+        <NestekampKort
+          tidspunkt="20:00"
+          hjemmelag="Costa Rica"
+          bortelag="Tyskland"
+          prediksjonH="0"
+          prediksjonU="0"
+          prediksjonB="100"
+        />
       </tbody>
     </table>
   );

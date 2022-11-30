@@ -17,22 +17,22 @@ const NestekampKort = (props: {
       <div className="flex w-full justify-end font-medium underline decoration-wcblue-50">
         {props.bortelag}
       </div>
-      <div className="mt-2 w-full text-sm ">🔮</div>
-      <div className="col-span-3 mt-2 flex h-6">
+      <div className="mt-2 h-6 w-full text-sm ">🔮</div>
+      <div className="bg-white col-span-3 mt-2 flex h-6 rounded-lg">
         <div
-          className="text-white flex w-full items-center justify-center rounded-l-lg bg-wcbeige-50 text-sm text-white-default"
+          className="text-white flex h-full w-full items-center justify-center rounded-l-lg bg-wcbeige-50 text-sm text-white-default"
           style={{ width: `${props.prediksjonH}%` }}
         >
           {props.prediksjonH}%
         </div>
         <div
-          className="flex w-full items-center justify-center bg-wcyellow-300 text-sm text-white-default "
+          className="flex h-full w-full items-center justify-center bg-wcyellow-300 text-sm text-white-default "
           style={{ width: `${props.prediksjonU}%` }}
         >
           {props.prediksjonU === "0" ? "" : `${props.prediksjonU}%`}
         </div>
         <div
-          className="flex w-full items-center justify-center rounded-r-lg bg-wcblue-100 text-sm text-white-default"
+          className="flex h-full w-full items-center justify-center bg-wcblue-50 rounded-r-lg text-sm text-white-default "
           style={{ width: `${props.prediksjonB}%` }}
         >
           {props.prediksjonB}%
