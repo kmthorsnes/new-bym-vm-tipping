@@ -55,7 +55,7 @@ function App() {
                     (item: { name: string; ranking: number; imgUrl: any }) => (
                       <div
                         key={item.name}
-                        className="object-fit flex w-full transform justify-center transition duration-500 hover:scale-110 cursor-pointer"
+                        className="object-fit flex w-full transform cursor-pointer justify-center transition duration-500 hover:scale-110"
                       >
                         <img
                           title="IKKE KLIKK 😏"
@@ -80,7 +80,7 @@ function App() {
                     (item: { name: string; ranking: number; imgUrl: any }) => (
                       <div
                         key={item.name}
-                        className="object-fit flex w-full cursor-pointer transform justify-center transition duration-500 hover:scale-110"
+                        className="object-fit flex w-full transform cursor-pointer justify-center transition duration-500 hover:scale-110"
                       >
                         <img
                           title="IKKE KLIKK 😏"
@@ -133,7 +133,7 @@ function App() {
           </div>
           <div className="flex w-full items-stretch justify-between self-end text-wcbeige-default">
             <Oklogo />
-            <span className="text-center">Sist oppdatert: 30.11.22</span>
+            <span className="text-center">Sist oppdatert: 01.12.22</span>
             <Wclogo />
           </div>
         </div>
