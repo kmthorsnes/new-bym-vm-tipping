@@ -12,9 +12,9 @@ const SisteResultater = () => {
       </thead>
       <tbody>
         <SisteResultatKort hjemmelag="Kroatia" hjemmelagScore={0} bortelag="Belgia" bortelagScore={0} />
-        <SisteResultatKort hjemmelag="Canada" hjemmelagScore={1} bortelag="Marokko" bortelagScore={0} />
-        <SisteResultatKort hjemmelag="Japan" hjemmelagScore={0} bortelag="Spania" bortelagScore={0} />
-        <SisteResultatKort hjemmelag="Costa Rica" hjemmelagScore={0} bortelag="Tyskland" bortelagScore={0} />
+        <SisteResultatKort hjemmelag="Canada" hjemmelagScore={1} bortelag="Marokko" bortelagScore={2} />
+        <SisteResultatKort hjemmelag="Japan" hjemmelagScore={2} bortelag="Spania" bortelagScore={1} />
+        <SisteResultatKort hjemmelag="Costa Rica" hjemmelagScore={2} bortelag="Tyskland" bortelagScore={4} />
       </tbody>
     </table>
   );
