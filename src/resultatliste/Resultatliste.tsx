@@ -10,7 +10,9 @@ const Resultatliste = () => {
           <div className="text-left text-3xl">Siste poeng:</div>
         </div>
         <div>
-          <div className="text-left text-xs ">#. Navn: Poeng (Siste poeng) [Detaljer*]</div>
+          <div className="text-left text-xs ">
+            #. Navn: Poeng (Siste poeng) [Detaljer*]
+          </div>
         </div>
       </div>
       <div>
@@ -37,12 +39,10 @@ const Resultatliste = () => {
                 <div className="flex items-center">
                   {item.ranking}. {item.name}:{" "}
                   {item.groupStageXtra +
-                    item.gsScore.reduce(
-                      (a: number, b: number) => a + b,
-                      0
-                    )}{"  "}
-
-                  <span className="text-xs">(
+                    item.gsScore.reduce((a: number, b: number) => a + b, 0)}
+                  {"  "}
+                  <span className="text-xs">
+                    (
                     {item.gsScore
                       .slice(-howMany)
                       .reduce((acc: number, val: number) => acc + val)}
@@ -55,7 +55,7 @@ const Resultatliste = () => {
                     </span>{" "}
                     +{" "}
                     <span className="text-bumanguéSBlue-400">
-                      {item.groupStageXtra}
+                      {item.groupStageXtra.toLocaleString()}
                     </span>
                     ]
                   </span>
