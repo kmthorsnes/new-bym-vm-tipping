@@ -11,7 +11,7 @@ const Resultatliste = () => {
         </div>
         <div>
           <div className="text-left text-xs ">
-            #. Navn: Poeng (Siste poeng) [Detaljer*]
+            #. Navn: Poeng (Siste poeng) [Detaljer*] test
           </div>
         </div>
       </div>
