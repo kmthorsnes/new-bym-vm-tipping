@@ -17,12 +17,12 @@ const Resultatliste = () => {
       </div>
       <div>
         {data.scores
-          // .sort(function (a, b) {
-          //   return (
-          //     a.gsScore.reduce((a: number, b: number) => a + b, 0) +
-          //     b.gsScore.reduce((a: number, b: number) => a + b, 0)
-          //   );
-          // })
+          .sort(function (a, b) {
+            return (
+              a.gsScore.reduce((a: number, b: number) => a + b, 0) +
+              b.gsScore.reduce((a: number, b: number) => a + b, 0)
+            );
+          })
           .map(
             (
               item: {
