@@ -16,10 +16,10 @@ const Resultatliste = () => {
         </div>
       </div>
       <div>
-        {/* {data.scores
+        {data.scores
           .sort(function (a, b) {
             return (
-              a.gsScore.reduce((a: number, b: number) => a + b, 0) +
+              a.gsScore.reduce((a: number, b: number) => a + b, 0) -
               b.gsScore.reduce((a: number, b: number) => a + b, 0)
             );
           })
@@ -60,7 +60,7 @@ const Resultatliste = () => {
                 </div>
               </div>
             )
-          )} */}
+          )}
         <span className="text-xs">
           *
           <span className="text-bumanguéSBlue-200">
