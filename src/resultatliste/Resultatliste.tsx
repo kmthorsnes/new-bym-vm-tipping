@@ -19,7 +19,7 @@ const Resultatliste = () => {
         {data.scores
           .sort(function (a, b) {
             return (
-              (a.groupStageScore+ a.groupStageXtra) +
+              (a.groupStageScore+ a.groupStageXtra) -
               (b.groupStageScore+ b.groupStageXtra)
             );
           })
