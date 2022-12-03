@@ -19,8 +19,8 @@ const Resultatliste = () => {
         {data.scores
           .sort(function (a, b) {
             return (
-              a.gsScore.reduce((a: number, b: number) => a + b, 0) -
-              b.gsScore.reduce((a: number, b: number) => a + b, 0)
+              a.groupStageXtra+a.gsScore.reduce((a: number, b: number) => a + b, 0) -
+              b.groupStageXtra+b.gsScore.reduce((a: number, b: number) => a + b, 0)
             );
           })
           .map(
