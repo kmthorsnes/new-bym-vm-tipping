@@ -4,23 +4,23 @@ const howMany: number = 4;
 
 const Resultatliste = () => {
   return (
-    <table className="table-auto">
-      <thead>
-        <tr>
-          <th className="text-left text-3xl">Siste poeng:</th>
-        </tr>
-        <tr>
-          <th className="text-left text-xs ">
-            #. Navn: Poeng (Poeng samlet forrige spilldag)
-          </th>
-        </tr>
-      </thead>
-      <tbody>
+    <div className="table-auto">
+      <div>
+        <div>
+          <div className="text-left text-3xl">Siste poeng:</div>
+        </div>
+        <div>
+          <div className="text-left text-xs ">#. Navn: Poeng (Siste poeng) [Detaljer*]</div>
+        </div>
+      </div>
+      <div>
         {data.scores
           .sort(function (a, b) {
             return (
-              b.score.reduce((a: number, b: number) => a + b, 0) -
-              a.score.reduce((a: number, b: number) => a + b, 0)
+              b.groupStageXtra +
+              b.gsScore.reduce((a: number, b: number) => a + b, 0) -
+              a.groupStageXtra +
+              a.gsScore.reduce((a: number, b: number) => a + b, 0)
             );
           })
           .map(
@@ -28,24 +28,53 @@ const Resultatliste = () => {
               item: {
                 name: string;
                 ranking: number;
-                score: Array<Number> | any;
+                gsScore: Array<Number> | any;
+                groupStageXtra: Number;
               },
               index
-            ) =>
-              <tr key={item.name}>
-                <td>
+            ) => (
+              <div key={item.name}>
+                <div className="flex items-center">
                   {item.ranking}. {item.name}:{" "}
-                  {item.score.reduce((a: number, b: number) => a + b, 0)} (
-                  {item.score
-                    .slice(-howMany)
-                    .reduce((acc: number, val: number) => acc + val)}
-                  )
-                </td>
-              </tr>
+                  {item.groupStageXtra +
+                    item.gsScore.reduce(
+                      (a: number, b: number) => a + b,
+                      0
+                    )}{"  "}
+
+                  <span className="text-xs">(
+                    {item.gsScore
+                      .slice(-howMany)
+                      .reduce((acc: number, val: number) => acc + val)}
+                    )
+                  </span>
+                  <span className="text-sm">
+                    [
+                    <span className="text-bumanguéSBlue-200">
+                      {item.gsScore.reduce((a: number, b: number) => a + b, 0)}
+                    </span>{" "}
+                    +{" "}
+                    <span className="text-bumanguéSBlue-400">
+                      {item.groupStageXtra}
+                    </span>
+                    ]
+                  </span>
+                </div>
+              </div>
             )
-          }
-      </tbody>
-    </table>
+          )}
+        <span className="text-xs">
+          *
+          <span className="text-bumanguéSBlue-200">
+            Gruppespillresultattipping
+          </span>
+          +{" "}
+          <span className="text-bumanguéSBlue-400">
+            Gruppespillspesialspill
+          </span>
+        </span>
+      </div>
+    </div>
   );
 };
 export default Resultatliste;
