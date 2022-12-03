@@ -19,8 +19,8 @@ const Resultatliste = () => {
         {data.scores
           .sort(function (a, b) {
             return (
-              a.gsScore.reduce((a: number, b: number) => a + b, 0) +
-              b.gsScore.reduce((a: number, b: number) => a + b, 0)
+              (a.groupStageScore+ a.groupStageXtra) +
+              (b.groupStageScore+ b.groupStageXtra)
             );
           })
           .map(
@@ -28,8 +28,8 @@ const Resultatliste = () => {
               item: {
                 name: string;
                 ranking: number;
-                gsScore: Array<Number> | any;
-                groupStageXtra: Number;
+                groupStageScore: number
+                groupStageXtra: number;
               },
               index
             ) => (
@@ -37,23 +37,21 @@ const Resultatliste = () => {
                 <div className="flex items-center">
                   {item.ranking}. {item.name}:{" "}
                   {item.groupStageXtra +
-                    item.gsScore.reduce((a: number, b: number) => a + b, 0)}
+                    item.groupStageScore}
                   {"  "}
                   <span className="text-xs">
                     (
-                    {item.gsScore
-                      .slice(-howMany)
-                      .reduce((acc: number, val: number) => acc + val)}
+                    {item.groupStageScore}
                     )
                   </span>
                   <span className="text-sm">
                     [
                     <span className="text-bumanguéSBlue-200">
-                      {item.gsScore.reduce((a: number, b: number) => a + b, 0)}
+                    {item.groupStageScore}
                     </span>{" "}
                     +{" "}
                     <span className="text-bumanguéSBlue-400">
-                      {item.groupStageXtra.toLocaleString()}
+                      {item.groupStageXtra}
                     </span>
                     ]
                   </span>
