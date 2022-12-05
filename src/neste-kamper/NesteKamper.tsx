@@ -6,16 +6,16 @@ const NesteKamper = () => {
       <thead>
         <tr>
           <th colSpan={3} className="text-left text-3xl">
-            Neste kamper 3.12 - Kvartfinaler
+            Neste kamper 5.12 - Kvartfinaler
           </th>
         </tr>
       </thead>
       <tbody>
-        <NestekampKort tidspunkt="16:00" hjemmelag="Nederland" bortelag="Usa" />
+        <NestekampKort tidspunkt="16:00" hjemmelag="Japan" bortelag="Kroatia" />
         <NestekampKort
           tidspunkt="20:00"
-          hjemmelag="Argentina"
-          bortelag="Australia"
+          hjemmelag="Brasil"
+          bortelag="Sør-Korea"
         />
       </tbody>
     </table>
