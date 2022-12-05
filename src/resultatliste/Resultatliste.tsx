@@ -11,7 +11,7 @@ const Resultatliste = () => {
         </div>
         <div>
           <div className="text-left text-xs ">
-            #. Navn: Poeng (Siste poeng) [Detaljer*] test
+            #. Navn: Poeng (Siste poeng) [Detaljer*]
           </div>
         </div>
       </div>
@@ -19,7 +19,8 @@ const Resultatliste = () => {
         {data.scores
           .sort(function (a, b) {
             return (
-              (a.groupStageScore + a.groupStageXtra) +
+              a.groupStageScore +
+              a.groupStageXtra +
               (b.groupStageScore + b.groupStageXtra)
             );
           })
@@ -28,7 +29,7 @@ const Resultatliste = () => {
               item: {
                 name: string;
                 ranking: number;
-                groupStageScore: number
+                groupStageScore: number;
                 groupStageXtra: number;
               },
               index
@@ -36,18 +37,13 @@ const Resultatliste = () => {
               <div key={item.name}>
                 <div className="flex items-center">
                   {item.ranking}. {item.name}:{" "}
-                  {item.groupStageXtra +
-                    item.groupStageScore}
+                  {item.groupStageXtra + item.groupStageScore}
                   {"  "}
-                  <span className="text-xs">
-                    (
-                    {item.groupStageScore}
-                    )
-                  </span>
+                  <span className="text-xs">({item.groupStageScore})</span>
                   <span className="text-sm">
                     [
                     <span className="text-bumanguéSBlue-200">
-                    {item.groupStageScore}
+                      {item.groupStageScore}
                     </span>{" "}
                     +{" "}
                     <span className="text-bumanguéSBlue-400">

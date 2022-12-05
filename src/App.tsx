@@ -28,6 +28,19 @@ const playRandomSound = () => {
 };
 
 function App() {
+  // const getData = async (url: string) => {
+  //   const response = await fetch(url);
+
+  //   return response.json();
+  // };
+
+  // const [apidata, setApiData] = useState<string[]>([])
+
+  // useEffect(() => {
+  //   getData("https://worldcupjson.net/matches").then((apidata) => setApiData(apidata))
+  //   console.log(apidata);
+  // }, []);
+
   return (
     <div className="App">
       <div className="flex min-h-screen flex-col p-2">
