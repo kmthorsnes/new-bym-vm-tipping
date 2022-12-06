@@ -2,7 +2,11 @@ import data from "../data/data.json";
 
 const howMany: number = 4;
 
+// typescript arrow function that adds three numbers
+const add = (a: number, b: number, c: number): number => a + b + c;
+
 const Resultatliste = () => {
+  console.log("rendering Resultatliste");
   return (
     <div className="table-auto">
       <div>
@@ -18,7 +22,10 @@ const Resultatliste = () => {
       <div>
         {data.scores
           .sort(function (a, b) {
-            return ((a.ranking) - (b.ranking));
+            return (
+              add(a.groupStageScore, a.groupStageScore, a.groupStageXtra) +
+              add(b.groupStageScore, b.groupStageScore, b.groupStageXtra)
+            );
           })
           .map(
             (
@@ -45,27 +52,27 @@ const Resultatliste = () => {
                     +{" "}
                     <span className="text-bumanguéSBlue-400">
                       {item.groupStageXtra}
-                    </span>
+                    </span>{" "}
                     + <span className="text-wcyellow-600">{item.eights}</span>]
                   </span>
                 </div>
               </div>
             )
           )}
-        <span className="text-xs">
-          *
-          <span className="text-bumanguéSBlue-200">
-            Gruppespillresultattipping
+
+        <div>
+          <span className="text-xs">
+            *
+            <span className="text-bumanguéSBlue-200">
+              Gruppespillresultattipping
+            </span>{" "}
+            +{" "}
+            <span className="text-bumanguéSBlue-400">
+              Gruppespillspesialspill
+            </span>{" "}
+            + <span className="text-wcyellow-600">Åttendedelsfinale</span>
           </span>
-          +{" "}
-          <span className="text-bumanguéSBlue-400">
-            Gruppespillspesialspill
-          </span>{" "}
-          +
-          <span className="text-wcyellow-600">
-            Åttendedelsfinale
-          </span>
-        </span>
+        </div>
       </div>
     </div>
   );

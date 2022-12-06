@@ -19,7 +19,7 @@ const NesteKamper = () => {
 
   return (
     <>
-          {/* {apidata.map(
+      {/* {apidata.map(
             (
               kamp: {
                 key: string;
@@ -34,24 +34,29 @@ const NesteKamper = () => {
                       </div>
                     ))} */}
 
-    <table className="table-auto">
-      <thead>
-        <tr>
-          <th colSpan={3} className="text-left text-3xl">
-            Neste kamper 6.12 - Åttendedelsfinale
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <NestekampKort tidspunkt="16:00" hjemmelag="Marokko" bortelag="Spania"  prediksjonH="42" prediksjonU="8" prediksjonB="50" />
+      <div className="table-auto">
+        <div className="text-left text-3xl">
+          Neste kamper 6.12 - Åttendedelsfinale
+        </div>
+      </div>
+      <div>
+        <NestekampKort
+          tidspunkt="16:00"
+          hjemmelag="Marokko"
+          bortelag="Spania"
+          prediksjonH="42"
+          prediksjonU="8"
+          prediksjonB="50"
+        />
         <NestekampKort
           tidspunkt="20:00"
           hjemmelag="Portugal"
           bortelag="Sveits"
-          prediksjonH="58" prediksjonU="25" prediksjonB="17"
+          prediksjonH="58"
+          prediksjonU="25"
+          prediksjonB="17"
         />
-      </tbody>
-    </table>
+      </div>
     </>
   );
 };
