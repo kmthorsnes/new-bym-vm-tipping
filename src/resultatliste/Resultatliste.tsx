@@ -63,7 +63,7 @@ const Resultatliste = () => {
           </span>{" "}
           +
           <span className="text-wcyellow-600">
-            Gruppespillspesialspill
+            Åttendedelsfinale
           </span>
         </span>
       </div>
