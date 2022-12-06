@@ -23,8 +23,8 @@ const Resultatliste = () => {
         {data.scores
           .sort(function (a, b) {
             return (
-              add(a.groupStageScore, a.groupStageScore, a.groupStageXtra) +
-              add(b.groupStageScore, b.groupStageScore, b.groupStageXtra)
+              (a.groupStageScore + a.groupStageScore+ a.groupStageXtra) +
+              (b.groupStageScore + b.groupStageScore+ b.groupStageXtra)
             );
           })
           .map(
