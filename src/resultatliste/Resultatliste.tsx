@@ -5,6 +5,8 @@ const howMany: number = 4;
 // typescript arrow function that adds three numbers
 const add = (a: number, b: number, c: number): number => a + b + c;
 
+const tulledata = data.scores;
+
 const Resultatliste = () => {
   console.log("rendering Resultatliste");
   return (
@@ -20,7 +22,7 @@ const Resultatliste = () => {
         </div>
       </div>
       <div>
-        {data.scores
+        {tulledata
           .sort(function (a, b) {
             return (
               (a.groupStageScore + a.groupStageScore+ a.groupStageXtra) +
