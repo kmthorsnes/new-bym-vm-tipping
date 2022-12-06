@@ -18,11 +18,7 @@ const Resultatliste = () => {
       <div>
         {data.scores
           .sort(function (a, b) {
-            return (
-              a.groupStageScore +
-              a.groupStageXtra +
-              (b.groupStageScore + b.groupStageXtra)
-            );
+            return ((a.ranking) - (b.ranking));
           })
           .map(
             (
@@ -31,15 +27,16 @@ const Resultatliste = () => {
                 ranking: number;
                 groupStageScore: number;
                 groupStageXtra: number;
+                eights: number;
               },
               index
             ) => (
               <div key={item.name}>
                 <div className="flex items-center">
                   {item.ranking}. {item.name}:{" "}
-                  {item.groupStageXtra + item.groupStageScore}
+                  {item.groupStageXtra + item.groupStageScore + item.eights}
                   {"  "}
-                  <span className="text-xs">({item.groupStageScore})</span>
+                  <span className="text-xs">({item.eights})</span>
                   <span className="text-sm">
                     [
                     <span className="text-bumanguéSBlue-200">
@@ -49,7 +46,7 @@ const Resultatliste = () => {
                     <span className="text-bumanguéSBlue-400">
                       {item.groupStageXtra}
                     </span>
-                    ]
+                    + <span className="text-wcyellow-600">{item.eights}</span>]
                   </span>
                 </div>
               </div>
@@ -62,6 +59,10 @@ const Resultatliste = () => {
           </span>
           +{" "}
           <span className="text-bumanguéSBlue-400">
+            Gruppespillspesialspill
+          </span>{" "}
+          +
+          <span className="text-wcyellow-600">
             Gruppespillspesialspill
           </span>
         </span>

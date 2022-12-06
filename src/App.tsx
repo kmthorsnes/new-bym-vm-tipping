@@ -60,9 +60,6 @@ function App() {
             <div className="flex h-full w-1/3 flex-col items-center p-4  mobile-only:w-full ">
               <div className="flex w-full flex-shrink flex-row items-center justify-center">
                 {data.scores
-                  .sort(function (a, b) {
-                    return a.ranking - b.ranking;
-                  })
                   .filter((score) => score.ranking === 1)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
@@ -85,9 +82,6 @@ function App() {
               </div>
               <div className="flex w-full flex-shrink flex-row ">
                 {data.scores
-                  .sort(function (a, b) {
-                    return a.ranking - b.ranking;
-                  })
                   .filter((score) => score.ranking === 2)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
@@ -113,7 +107,7 @@ function App() {
                   .sort(function (a, b) {
                     return a.ranking - b.ranking;
                   })
-                  .filter((score) => score.ranking === 5)
+                  .filter((score) => score.ranking === 3)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
                       <div
@@ -146,7 +140,7 @@ function App() {
           </div>
           <div className="flex w-full items-stretch justify-between self-end text-wcbeige-default">
             <Oklogo />
-            <span className="text-center">Sist oppdatert: 05.12.22</span>
+            <span className="text-center">Sist oppdatert: 06.12.22</span>
             <Wclogo />
           </div>
         </div>
