@@ -16,7 +16,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 3,
+      "ranking": 0,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/blend.png",
         "card": "/src/assets/images/profiles/card/blend.png",
@@ -39,7 +39,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 6,
+      "ranking": 0,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/caroline.png",
         "card": "/src/assets/images/profiles/card/caroline.png",
@@ -62,7 +62,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 9,
+      "ranking": 0,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/cilje.jpg",
         "card": "/src/assets/images/profiles/card/cilje.png",
@@ -85,7 +85,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 11,
+      "ranking": 0,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/dag.png",
         "badge": "/src/assets/images/profiles/background/dag.png",
@@ -108,7 +108,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 11,
+      "ranking": 0,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/finnerik.png",
         "badge": "/src/assets/images/profiles/background/finnerik.png",
@@ -131,7 +131,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 7,
+      "ranking": 0,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/guled.png",
         "badge": "/src/assets/images/profiles/background/guled.png",
@@ -154,7 +154,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 3,
+      "ranking": 0,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/hanserling.png",
         "badge": "/src/assets/images/profiles/background/hanserling.png",
@@ -177,7 +177,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 8,
+      "ranking": 0,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/ingunn.png",
         "badge": "/src/assets/images/profiles/background/ingunn.png",
@@ -200,7 +200,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 1,
+      "ranking": 0,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/kalle.png",
         "badge": "/src/assets/images/profiles/background/kalle.png",
@@ -223,7 +223,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 6,
+      "ranking": 0,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/samir.png",
         "badge": "/src/assets/images/profiles/background/samir.png",
@@ -246,7 +246,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 2,
+      "ranking": 0,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/torgeir.png",
         "badge": "/src/assets/images/profiles/background/torgeir.png",
@@ -269,7 +269,7 @@
       "final": 0,
       "champion": 0,
       "topScorers": 0,
-      "ranking": 3,
+      "ranking": 0,
       "imgUrl": {
         "original": "/src/assets/images/profiles/background/william.png",
         "badge": "/src/assets/images/profiles/background/william.png",

@@ -104,9 +104,6 @@ function App() {
               </div>
               <div className="flex w-full flex-shrink flex-row ">
                 {data.scores
-                  .sort(function (a, b) {
-                    return a.ranking - b.ranking;
-                  })
                   .filter((score) => score.ranking === 3)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
