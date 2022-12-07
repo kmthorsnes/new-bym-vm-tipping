@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import NestekampKort from "./NestekampKort";
 
 const NesteKamper = () => {
-
   const getData = async (url: string) => {
     const response = await fetch(url);
     return response.json();
@@ -17,39 +16,39 @@ const NesteKamper = () => {
   }, []);
 
   // return a list of latest played matches
-  const latestMatches =
-  apidata
+  const latestMatches = apidata
     .filter((match) => match.status === "completed")
     .slice(0, 5);
 
   // return a list of upcoming matches
   return (
-
-
     <>
       <div className="table-auto">
-        <div className="text-left text-3xl">
-          {/* Neste kamper 6.12 - Åttendedelsfinale */}
-        </div>
-        {latestMatches.map((match) => (<p key={match.id}>{match.hometeam}</p>))}
+        <div className="text-left text-3xl mb-2 font-bold">Neste kamper - Kvartfinaler</div>
+        <div className="text-xl mb-2">Fredag 9.12.2022</div>
       </div>
       <div>
-        {/* <NestekampKort
+        <NestekampKort
           tidspunkt="16:00"
-          hjemmelag="Marokko"
-          bortelag="Spania"
-          prediksjonH="42"
-          prediksjonU="8"
-          prediksjonB="50"
+          hjemmelag="Kroatia"
+          bortelag="Brasil"
         />
         <NestekampKort
           tidspunkt="20:00"
-          hjemmelag="Portugal"
-          bortelag="Sveits"
-          prediksjonH="58"
-          prediksjonU="25"
-          prediksjonB="17"
-        /> */}
+          hjemmelag="Nederland"
+          bortelag="Argentina"
+        />
+        <div className="text-xl mt-2">Lørdag 10.12.2022</div>
+        <NestekampKort
+          tidspunkt="16:00"
+          hjemmelag="Marokko"
+          bortelag="Portugal"
+        />
+        <NestekampKort
+          tidspunkt="20:00"
+          hjemmelag="England"
+          bortelag="Frankrike"
+        />
       </div>
     </>
   );

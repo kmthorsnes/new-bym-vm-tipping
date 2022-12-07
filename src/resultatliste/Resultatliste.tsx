@@ -7,8 +7,8 @@ const sortByTotalScore = () => {
     return (
       b.groupStageScore +
       b.groupStageXtra +
-      b.eights -
-      (a.groupStageScore + a.groupStageXtra + a.eights)
+      b.eightsMatchesPt1 + b.eightsMatchesPt2 + b.quarterFinalists -
+      (a.groupStageScore + a.groupStageXtra + a.eightsMatchesPt1 + a.eightsMatchesPt2 + a.quarterFinalists)
     );
   });
 };
@@ -20,7 +20,7 @@ const addRanking = () => {
   let previousScore = 0;
   data.scores.forEach((item) => {
     if (
-      item.groupStageScore + item.groupStageXtra + item.eights !==
+      item.groupStageScore + item.groupStageXtra + item.eightsMatchesPt1 + item.eightsMatchesPt2 + item.quarterFinalists !==
       previousScore
     ) {
       item.ranking = ranking;
@@ -28,7 +28,7 @@ const addRanking = () => {
     } else {
       item.ranking = ranking - 1;
     }
-    previousScore = item.groupStageScore + item.groupStageXtra + item.eights;
+    previousScore = item.groupStageScore + item.groupStageXtra + item.eightsMatchesPt1 + item.eightsMatchesPt2 + item.quarterFinalists;
   });
 };
 
@@ -40,7 +40,7 @@ const Resultatliste = () => {
     <div className="table-auto">
       <div>
         <div>
-          <div className="text-left text-3xl">Siste poeng:</div>
+          <div className="text-left text-3xl font-bold">Siste poeng:</div>
         </div>
         <div>
           <div className="text-left text-xs ">
@@ -56,16 +56,19 @@ const Resultatliste = () => {
               ranking: number;
               groupStageScore: number;
               groupStageXtra: number;
-              eights: number;
+              eightsMatchesPt1: number;
+              eightsMatchesPt2: number;
+              quarterFinalists: number;
+
             },
             index
           ) => (
             <div key={item.name}>
               <div className="flex items-center">
                 {item.ranking}. {item.name}:{" "}
-                {item.groupStageXtra + item.groupStageScore + item.eights}
+                {item.groupStageXtra + item.groupStageScore + item.eightsMatchesPt1 + item.eightsMatchesPt2 + item.quarterFinalists}
                 {"  "}
-                <span className="text-xs">({item.eights})</span>
+                <span className="text-xs">({item.eightsMatchesPt1})</span>
                 <span className="text-sm">
                   [
                   <span className="text-bumanguéSBlue-200">
@@ -75,7 +78,9 @@ const Resultatliste = () => {
                   <span className="text-bumanguéSBlue-400">
                     {item.groupStageXtra}
                   </span>{" "}
-                  + <span className="text-wcyellow-600">{item.eights}</span>]
+                  + <span className="text-wcyellow-600">{item.eightsMatchesPt1 + item.eightsMatchesPt2}</span>
+                  {" "}
+                  + <span className="text-green-default">{item.quarterFinalists}</span>]
                 </span>
               </div>
             </div>
@@ -92,7 +97,8 @@ const Resultatliste = () => {
             <span className="text-bumanguéSBlue-400">
               Gruppespillspesialspill
             </span>{" "}
-            + <span className="text-wcyellow-600">Åttendedelsfinale</span>
+            + <span className="text-wcyellow-600">1/8-finalerresultattipping</span>{" "}
+            + <span className="text-green-default">Kvartfinalister</span>
           </span>
         </div>
       </div>
