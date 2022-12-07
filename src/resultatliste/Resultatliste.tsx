@@ -7,28 +7,54 @@ const sortByTotalScore = () => {
     return (
       b.groupStageScore +
       b.groupStageXtra +
-      b.eightsMatchesPt1 + b.eightsMatchesPt2 + b.quarterFinalists -
-      (a.groupStageScore + a.groupStageXtra + a.eightsMatchesPt1 + a.eightsMatchesPt2 + a.quarterFinalists)
+      b.eightsMatchesPt1 +
+      b.eightsMatchesPt2 +
+      b.quarterFinalists -
+      (a.groupStageScore +
+        a.groupStageXtra +
+        a.eightsMatchesPt1 +
+        a.eightsMatchesPt2 +
+        a.quarterFinalists)
     );
   });
 };
 
+// a function that ranks players after totalt socre. If two players or more have the same score, they get the same ranking and the next players gets a rank which is the previous score + the number of players with the previous score.
 
-// create function that adds a ranking to each player based on the total score
 const addRanking = () => {
   let ranking = 1;
   let previousScore = 0;
-  data.scores.forEach((item) => {
+  let numberOfPlayersWithPreviousScore = 0;
+  data.scores.forEach((item, index) => {
     if (
-      item.groupStageScore + item.groupStageXtra + item.eightsMatchesPt1 + item.eightsMatchesPt2 + item.quarterFinalists !==
+      item.groupStageScore +
+        item.groupStageXtra +
+        item.eightsMatchesPt1 +
+        item.eightsMatchesPt2 +
+        item.quarterFinalists ===
       previousScore
     ) {
       item.ranking = ranking;
-      ranking++;
-    } else {
-      item.ranking = ranking - 1;
+      numberOfPlayersWithPreviousScore++;
     }
-    previousScore = item.groupStageScore + item.groupStageXtra + item.eightsMatchesPt1 + item.eightsMatchesPt2 + item.quarterFinalists;
+    if (
+      item.groupStageScore +
+        item.groupStageXtra +
+        item.eightsMatchesPt1 +
+        item.eightsMatchesPt2 +
+        item.quarterFinalists !==
+      previousScore
+    ) {
+      ranking = ranking + numberOfPlayersWithPreviousScore;
+      item.ranking = ranking;
+      numberOfPlayersWithPreviousScore = 1;
+      previousScore =
+        item.groupStageScore +
+        item.groupStageXtra +
+        item.eightsMatchesPt1 +
+        item.eightsMatchesPt2 +
+        item.quarterFinalists;
+    }
   });
 };
 
@@ -59,14 +85,17 @@ const Resultatliste = () => {
               eightsMatchesPt1: number;
               eightsMatchesPt2: number;
               quarterFinalists: number;
-
             },
             index
           ) => (
             <div key={item.name}>
               <div className="flex items-center">
                 {item.ranking}. {item.name}:{" "}
-                {item.groupStageXtra + item.groupStageScore + item.eightsMatchesPt1 + item.eightsMatchesPt2 + item.quarterFinalists}
+                {item.groupStageXtra +
+                  item.groupStageScore +
+                  item.eightsMatchesPt1 +
+                  item.eightsMatchesPt2 +
+                  item.quarterFinalists}
                 {"  "}
                 <span className="text-xs">({item.eightsMatchesPt1})</span>
                 <span className="text-sm">
@@ -78,9 +107,15 @@ const Resultatliste = () => {
                   <span className="text-bumanguéSBlue-400">
                     {item.groupStageXtra}
                   </span>{" "}
-                  + <span className="text-wcyellow-600">{item.eightsMatchesPt1 + item.eightsMatchesPt2}</span>
-                  {" "}
-                  + <span className="text-green-default">{item.quarterFinalists}</span>]
+                  +{" "}
+                  <span className="text-wcyellow-600">
+                    {item.eightsMatchesPt1 + item.eightsMatchesPt2}
+                  </span>{" "}
+                  +{" "}
+                  <span className="text-green-default">
+                    {item.quarterFinalists}
+                  </span>
+                  ]
                 </span>
               </div>
             </div>
@@ -97,7 +132,10 @@ const Resultatliste = () => {
             <span className="text-bumanguéSBlue-400">
               Gruppespillspesialspill
             </span>{" "}
-            + <span className="text-wcyellow-600">1/8-finalerresultattipping</span>{" "}
+            +{" "}
+            <span className="text-wcyellow-600">
+              1/8-finalerresultattipping
+            </span>{" "}
             + <span className="text-green-default">Kvartfinalister</span>
           </span>
         </div>

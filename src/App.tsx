@@ -65,7 +65,7 @@ function App() {
                     (item: { name: string; ranking: number; imgUrl: any }) => (
                       <div
                         key={item.name}
-                        className="object-fit flex w-full transform cursor-pointer justify-center transition duration-500 hover:scale-110"
+                        className="relative object-fit flex w-full transform cursor-pointer justify-center transition duration-500 hover:scale-110"
                       >
                         <img
                           title="IKKE KLIKK 😏"
@@ -76,6 +76,7 @@ function App() {
                             .replace(/\s/g, "")}.png`}
                           alt=""
                         />
+                        <div className="absolute top-12 right-20 bg-white-default h-8 w-8 rounded-full flex justify-center items-center">{item.ranking}</div>
                       </div>
                     )
                   )}
