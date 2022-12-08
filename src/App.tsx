@@ -76,7 +76,7 @@ function App() {
                             .replace(/\s/g, "")}.png`}
                           alt=""
                         />
-                        <div className="absolute top-12 right-20 bg-white-default h-8 w-8 rounded-full flex justify-center items-center">{item.ranking}</div>
+
                       </div>
                     )
                   )}
