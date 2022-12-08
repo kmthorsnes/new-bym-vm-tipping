@@ -32,22 +32,34 @@ const NesteKamper = () => {
           tidspunkt="16:00"
           hjemmelag="Kroatia"
           bortelag="Brasil"
+          prediksjonH="8"
+          prediksjonU="8"
+          prediksjonB="83"
         />
         <NestekampKort
           tidspunkt="20:00"
           hjemmelag="Nederland"
           bortelag="Argentina"
+          prediksjonH="33"
+          prediksjonU="42"
+          prediksjonB="25"
         />
         <div className="text-xl mt-2">Lørdag 10.12.2022</div>
         <NestekampKort
           tidspunkt="16:00"
           hjemmelag="Marokko"
           bortelag="Portugal"
+          prediksjonH="33"
+          prediksjonU="42"
+          prediksjonB="25"
         />
         <NestekampKort
           tidspunkt="20:00"
           hjemmelag="England"
           bortelag="Frankrike"
+          prediksjonH="17"
+          prediksjonU="50"
+          prediksjonB="33"
         />
       </div>
     </>
