@@ -9,12 +9,34 @@ const sortByTotalScore = () => {
       b.groupStageXtra +
       b.eightsMatchesPt1 +
       b.eightsMatchesPt2 +
-      b.quarterFinalists -
+      b.quarterFinalists +
+      b.qf1 +
+      b.qf2 +
+      b.qf3 +
+      b.qf4 +
+      b.semiFinalist1 +
+      b.semiFinalist2 +
+      b.semiFinalist3 +
+      b.semiFinalist4 +
+      b.finalist1 +
+      b.finalist2 +
+      b.champion -
       (a.groupStageScore +
         a.groupStageXtra +
         a.eightsMatchesPt1 +
         a.eightsMatchesPt2 +
-        a.quarterFinalists)
+        a.quarterFinalists +
+        a.qf1 +
+        a.qf2 +
+        a.qf3 +
+        a.qf4 +
+        a.semiFinalist1 +
+        a.semiFinalist2 +
+        a.semiFinalist3 +
+        a.semiFinalist4 +
+        a.finalist1 +
+        a.finalist2 +
+        a.champion)
     );
   });
 };
@@ -31,7 +53,18 @@ const addRanking = () => {
         item.groupStageXtra +
         item.eightsMatchesPt1 +
         item.eightsMatchesPt2 +
-        item.quarterFinalists ===
+        item.quarterFinalists +
+        item.qf1 +
+        item.qf2 +
+        item.qf3 +
+        item.qf4 +
+        item.semiFinalist1 +
+        item.semiFinalist2 +
+        item.semiFinalist3 +
+        item.semiFinalist4 +
+        item.finalist1 +
+        item.finalist2 +
+        item.champion ===
       previousScore
     ) {
       item.ranking = ranking;
@@ -42,7 +75,18 @@ const addRanking = () => {
         item.groupStageXtra +
         item.eightsMatchesPt1 +
         item.eightsMatchesPt2 +
-        item.quarterFinalists !==
+        item.quarterFinalists +
+        item.qf1 +
+        item.qf2 +
+        item.qf3 +
+        item.qf4 +
+        item.semiFinalist1 +
+        item.semiFinalist2 +
+        item.semiFinalist3 +
+        item.semiFinalist4 +
+        item.finalist1 +
+        item.finalist2 +
+        item.champion !==
       previousScore
     ) {
       ranking = ranking + numberOfPlayersWithPreviousScore;
@@ -53,11 +97,21 @@ const addRanking = () => {
         item.groupStageXtra +
         item.eightsMatchesPt1 +
         item.eightsMatchesPt2 +
-        item.quarterFinalists;
+        item.quarterFinalists +
+        item.qf1 +
+        item.qf2 +
+        item.qf3 +
+        item.qf4 +
+        item.semiFinalist1 +
+        item.semiFinalist2 +
+        item.semiFinalist3 +
+        item.semiFinalist4 +
+        item.finalist1 +
+        item.finalist2 +
+        item.champion
     }
   });
 };
-
 sortByTotalScore();
 addRanking();
 
@@ -75,7 +129,9 @@ const Resultatliste = () => {
         </div>
       </div>
       <div>
-        {data.scores.map(
+        {data.scores.
+
+        map(
           (
             item: {
               name: string;
@@ -89,7 +145,13 @@ const Resultatliste = () => {
               qf2: number;
               qf3: number;
               qf4: number;
-              semiFinalists: number;
+              semiFinalist1: number;
+              semiFinalist2: number;
+              semiFinalist3: number;
+              semiFinalist4: number;
+              finalist1: number;
+              finalist2: number;
+              champion: number;
             },
             index
           ) => (
@@ -105,9 +167,15 @@ const Resultatliste = () => {
                   item.qf2 +
                   item.qf3 +
                   item.qf4 +
-                  item.semiFinalists}
+                  item.semiFinalist1 +
+                  item.semiFinalist2 +
+                  item.semiFinalist3 +
+                  item.semiFinalist4 +
+                  item.finalist1 +
+                  item.finalist2 + item.champion
+                   }
                 {"  "}
-                <span className="text-xs">({item.qf1})</span>
+                <span className="text-xs">({item.qf2})</span>
                 <span className="text-sm">
                   [
                   <span className="text-bumanguéSBlue-200">
@@ -130,7 +198,7 @@ const Resultatliste = () => {
                     {item.qf1 + item.qf2 + item.qf3 + item.qf4}
                   </span>{" "}
                   +{" "}
-                  <span className="text-green-dark">{item.semiFinalists}</span>]
+                  <span className="text-green-dark">{item.semiFinalist1 + item.semiFinalist2 + item.semiFinalist3 + item.semiFinalist4}</span>]
                 </span>
               </div>
             </div>
@@ -151,10 +219,10 @@ const Resultatliste = () => {
             <span className="text-wcyellow-600">
               1/8-finalerresultattipping
             </span>{" "}
-            + <span className="text-green-default">Kvartfinalister</span>+{" "}
+            + {" "}<span className="text-green-default">Kvartfinalister</span>{" "}+{" "}
             <span className="text-black-default">
               Kvartfinaleresultattipping
-            </span>
+            </span>{" "}
             + <span className="text-green-dark">Semifinalister</span>
           </span>
         </div>

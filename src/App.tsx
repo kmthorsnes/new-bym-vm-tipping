@@ -93,7 +93,7 @@ function App() {
               </div>
               <div className="flex w-full flex-shrink flex-row ">
                 {data.scores
-                  .filter((score) => score.ranking === 3)
+                  .filter((score) => score.ranking === 4)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
                       <div

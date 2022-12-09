@@ -25,17 +25,9 @@ const NesteKamper = () => {
     <>
       <div className="table-auto">
         <div className="text-left text-3xl mb-2 font-bold">Neste kamper - Kvartfinaler</div>
-        <div className="text-xl mb-2">Fredag 9.12.2022</div>
       </div>
       <div>
-        <NestekampKort
-          tidspunkt="20:00"
-          hjemmelag="Nederland"
-          bortelag="Argentina"
-          prediksjonH="33"
-          prediksjonU="42"
-          prediksjonB="25"
-        />
+
         <div className="text-xl mt-2">Lørdag 10.12.2022</div>
         <NestekampKort
           tidspunkt="16:00"
