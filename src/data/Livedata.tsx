@@ -9,20 +9,43 @@ const Livedata = () => {
   const [apidata, setApiData] = useState<any[]>([]);
 
   useEffect(() => {
-    getData("https://worldcupjson.net/matches").then((data) =>
-      setApiData(data)
-    );
-    console.log(apidata);
+    const interval = setInterval(() => {
+      getData("https://worldcupjson.net/matches/current").then((data) =>
+        setApiData(data)
+
+      );
+      console.log('data fetched')
+    }, 30000);
+    return () => clearInterval(interval);
   }, []);
+
+
+
+  console.log(apidata);
+
+
 
   return (
     <>
-      <div>Her er det livedata</div>
-      {apidata.map((item: { id: number; location: string}) => (
-
-        <div key={item.id}>{item.location}</div>
-                ))}
-
+      {apidata.length !== 0 && (
+        <div>
+          <div className="font-2xl">Live score</div>
+          {apidata.map(
+            (item: {
+              away_team: any;
+              home_team: any;
+              id: number;
+              location: string;
+              name: string;
+            }) => (
+              <div key={item.id}>
+                {item.home_team.name} {item.home_team.goals} -{" "}
+                {item.away_team.goals} {item.away_team.name}{" "}
+              </div>
+            )
+          )}
+        </div>
+      )}
     </>
   );
 };
