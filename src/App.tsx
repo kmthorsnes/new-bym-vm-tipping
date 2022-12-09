@@ -29,7 +29,6 @@ const playRandomSound = () => {
 };
 
 function App() {
-
   return (
     <div className="App">
       <div className="flex min-h-screen flex-col p-2">
@@ -55,7 +54,7 @@ function App() {
                     (item: { name: string; ranking: number; imgUrl: any }) => (
                       <div
                         key={item.name}
-                        className="relative object-fit flex w-full transform cursor-pointer justify-center transition duration-500 hover:scale-110"
+                        className="object-fit relative flex w-full transform cursor-pointer justify-center transition duration-500 hover:scale-110"
                       >
                         <img
                           title="IKKE KLIKK 😏"
@@ -66,7 +65,6 @@ function App() {
                             .replace(/\s/g, "")}.png`}
                           alt=""
                         />
-
                       </div>
                     )
                   )}
@@ -128,7 +126,7 @@ function App() {
           </div>
           <div className="flex w-full items-stretch justify-between self-end text-wcbeige-default">
             <Oklogo />
-            <span className="text-center">Sist oppdatert: 07.12.22</span>
+            <span className="text-center">Sist oppdatert: 09.12.22</span>
             <Wclogo />
           </div>
         </div>
