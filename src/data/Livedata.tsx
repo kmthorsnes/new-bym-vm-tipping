@@ -15,7 +15,7 @@ const Livedata = () => {
 
       );
       console.log('data fetched')
-    }, 30000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -29,7 +29,7 @@ const Livedata = () => {
     <>
       {apidata.length !== 0 && (
         <div>
-          <div className="font-2xl">Live score</div>
+          <div className="font-2xl font-bold">Live score</div>
           {apidata.map(
             (item: {
               away_team: any;

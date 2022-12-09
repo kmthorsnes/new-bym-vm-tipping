@@ -29,14 +29,6 @@ const NesteKamper = () => {
       </div>
       <div>
         <NestekampKort
-          tidspunkt="16:00"
-          hjemmelag="Kroatia"
-          bortelag="Brasil"
-          prediksjonH="8"
-          prediksjonU="8"
-          prediksjonB="83"
-        />
-        <NestekampKort
           tidspunkt="20:00"
           hjemmelag="Nederland"
           bortelag="Argentina"

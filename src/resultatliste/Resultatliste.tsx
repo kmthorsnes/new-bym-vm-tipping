@@ -85,6 +85,11 @@ const Resultatliste = () => {
               eightsMatchesPt1: number;
               eightsMatchesPt2: number;
               quarterFinalists: number;
+              qf1: number;
+              qf2: number;
+              qf3: number;
+              qf4: number;
+              semiFinalists: number;
             },
             index
           ) => (
@@ -95,9 +100,14 @@ const Resultatliste = () => {
                   item.groupStageScore +
                   item.eightsMatchesPt1 +
                   item.eightsMatchesPt2 +
-                  item.quarterFinalists}
+                  item.quarterFinalists +
+                  item.qf1 +
+                  item.qf2 +
+                  item.qf3 +
+                  item.qf4 +
+                  item.semiFinalists}
                 {"  "}
-                <span className="text-xs">({item.eightsMatchesPt1})</span>
+                <span className="text-xs">({item.qf1})</span>
                 <span className="text-sm">
                   [
                   <span className="text-bumanguéSBlue-200">
@@ -114,8 +124,13 @@ const Resultatliste = () => {
                   +{" "}
                   <span className="text-green-default">
                     {item.quarterFinalists}
-                  </span>
-                  ]
+                  </span>{" "}
+                  +{" "}
+                  <span className="text-black-default">
+                    {item.qf1 + item.qf2 + item.qf3 + item.qf4}
+                  </span>{" "}
+                  +{" "}
+                  <span className="text-green-dark">{item.semiFinalists}</span>]
                 </span>
               </div>
             </div>
@@ -136,7 +151,11 @@ const Resultatliste = () => {
             <span className="text-wcyellow-600">
               1/8-finalerresultattipping
             </span>{" "}
-            + <span className="text-green-default">Kvartfinalister</span>
+            + <span className="text-green-default">Kvartfinalister</span>+{" "}
+            <span className="text-black-default">
+              Kvartfinaleresultattipping
+            </span>
+            + <span className="text-green-dark">Semifinalister</span>
           </span>
         </div>
       </div>

@@ -12,16 +12,10 @@ const SisteResultater = () => {
       </thead>
       <tbody>
         <SisteResultatKort
-          hjemmelag="Marokko"
+          hjemmelag="Kroatia*"
           hjemmelagScore={0}
-          bortelag="Spania*"
+          bortelag="Brasil"
           bortelagScore={0}
-        />
-        <SisteResultatKort
-          hjemmelag="Portugal"
-          hjemmelagScore={6}
-          bortelag="Sveits"
-          bortelagScore={1}
         />
       </tbody>
     </table>
