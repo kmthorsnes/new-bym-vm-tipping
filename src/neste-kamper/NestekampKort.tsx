@@ -8,7 +8,7 @@ const NestekampKort = (props: {
   style?: string;
 }): JSX.Element => {
   return (
-    <div className={`mt-2 grid  ${props.prediksjonH ? 'grid-cols-4' : 'grid-cols-2'}  `}>
+    <div className={`mt-2 grid grid-cols-4`}>
       <div className="flex w-fit text-left">{props.tidspunkt}:</div>
       <div className="flex w-full items-center justify-start font-medium underline decoration-wcbeige-50">
         {props.hjemmelag}

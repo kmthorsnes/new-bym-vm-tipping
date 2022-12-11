@@ -175,7 +175,7 @@ const Resultatliste = () => {
                   item.finalist2 + item.champion
                    }
                 {"  "}
-                <span className="text-xs">({item.qf2})</span>
+                <span className="text-xs">({item.qf4})</span>
                 <span className="text-sm">
                   [
                   <span className="text-bumanguéSBlue-200">
@@ -198,7 +198,7 @@ const Resultatliste = () => {
                     {item.qf1 + item.qf2 + item.qf3 + item.qf4}
                   </span>{" "}
                   +{" "}
-                  <span className="text-green-dark">{item.semiFinalist1 + item.semiFinalist2 + item.semiFinalist3 + item.semiFinalist4}</span>]
+                  <span className="text-red-500">{item.semiFinalist1 + item.semiFinalist2 + item.semiFinalist3 + item.semiFinalist4}</span>]
                 </span>
               </div>
             </div>
@@ -223,7 +223,7 @@ const Resultatliste = () => {
             <span className="text-black-default">
               Kvartfinaleresultattipping
             </span>{" "}
-            + <span className="text-green-dark">Semifinalister</span>
+            + <span className="text-red-500">Semifinalister</span>
           </span>
         </div>
       </div>

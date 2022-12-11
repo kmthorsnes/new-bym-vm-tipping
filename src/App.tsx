@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <div className="flex min-h-screen flex-col p-2">
-        <div className="border-red-600 flex h-full min-h-screen w-full max-w-full flex-col items-start rounded border-4 border-wcbeige-default p-2 ">
+        <div className="flex h-full min-h-screen w-full max-w-full flex-col items-start rounded border-4 border-wcbeige-default p-2 ">
           <div className="flex w-full justify-between justify-items-end">
             <TakeMyMoney />
             <div className="flex text-center text-5xl text-wcbeige-default">
@@ -46,7 +46,7 @@ function App() {
               <Resultatliste />
               <Livedata />
             </div>
-            <div className="flex h-full w-1/3 flex-col items-center p-4  mobile-only:w-full ">
+            <div className="flex h-full w-1/3 flex-col items-center rounded-md border-2 border-goldenrod-default p-4  mobile-only:w-full ">
               <div className="flex w-full flex-shrink flex-row items-center justify-center">
                 {data.scores
                   .filter((score) => score.ranking === 1)
@@ -93,7 +93,7 @@ function App() {
               </div>
               <div className="flex w-full flex-shrink flex-row ">
                 {data.scores
-                  .filter((score) => score.ranking === 4)
+                  .filter((score) => score.ranking === 3)
                   .map(
                     (item: { name: string; ranking: number; imgUrl: any }) => (
                       <div
@@ -124,9 +124,29 @@ function App() {
               </div>
             </div>
           </div>
+          <div className="mb-2 flex w-full  items-center justify-center mobile-only:flex-wrap ">
+            {data.scores.map(
+              (item: { name: string; ranking: number; imgUrl: any }) => (
+                <div
+                  title="IKKE KLIKK 😏"
+                  key={item.name}
+                  className=" object-fit flex transform cursor-pointer justify-center transition duration-500 hover:scale-[1.7] phablet:w-full"
+                >
+                  <img
+                    onClick={playRandomSound}
+                    className="h-24 w-auto"
+                    src={`/profiles/card/${item.name
+                      .toLowerCase()
+                      .replace(/\s/g, "")}.png`}
+                    alt=""
+                  />
+                </div>
+              )
+            )}
+          </div>
           <div className="flex w-full items-stretch justify-between self-end text-wcbeige-default">
             <Oklogo />
-            <span className="text-center">Sist oppdatert: 09.12.22</span>
+            <span className="text-center">Sist oppdatert:11.12.22</span>
             <Wclogo />
           </div>
         </div>

@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
 module.exports = {
   tailwindConfig: "tailwind.config.cjs",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -11,7 +12,7 @@ module.exports = {
       laptop: `77.25rem` /* ~1236px */,
       desktop: `100rem`  /* ~1600px */,
     },
-    colors: {
+    extend: {colors: {
       black: {
         default: "#2c2c2c",
         backdrop: "#2c2c2c99",
@@ -33,6 +34,9 @@ module.exports = {
         default: "#43f8b6",
         light: "#c7f6c9",
         dark: "#034b45",
+      },
+      "goldenrod": {
+        "default": "#daa520",
       },
       "wcbeige": {
         "50": "#88365e",
@@ -94,8 +98,7 @@ module.exports = {
         800: "#042360",
         900: "#060536",
       }
-    },
-    extend: {},
+    },},
   },
   plugins: [],
-};
+}

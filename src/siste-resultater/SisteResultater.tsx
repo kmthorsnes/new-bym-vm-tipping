@@ -23,6 +23,18 @@ const SisteResultater = () => {
           bortelag="Argentina*"
           bortelagScore={2}
         />
+        <SisteResultatKort
+          hjemmelag="Marokko"
+          hjemmelagScore={1}
+          bortelag="Portugal"
+          bortelagScore={0}
+        />
+        <SisteResultatKort
+          hjemmelag="England"
+          hjemmelagScore={1}
+          bortelag="Frankrike"
+          bortelagScore={2}
+        />
       </tbody>
     </table>
   );
