@@ -11,7 +11,7 @@ const SisteResultater = () => {
       const matches = await response.json();
       // Filter out only the latest completed matches
       const latestCompletedMatches = matches.filter(
-        (match: { status: string; datetime: string | number | Date | any; home_team: any; away_team: any }) => {
+        (match: { status: string; datetime: string | Number | Date | any; home_team: any; away_team: any }) => {
           // Check that the match is completed and is from the last 5 days
           return (
             match.status === "completed" &&
