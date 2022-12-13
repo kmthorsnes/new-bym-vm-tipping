@@ -33,9 +33,9 @@ const NesteKamper = () => {
           tidspunkt="20:00"
           hjemmelag="Argentina"
           bortelag="Kroatia"
-          // prediksjonH="50"
-          // prediksjonU="25"
-          // prediksjonB="25"
+          prediksjonH="42"
+          prediksjonU="42"
+          prediksjonB="17"
 
         />
         <div className="text-xl mt-2">Onsdag 14.12.2022</div>
@@ -43,9 +43,9 @@ const NesteKamper = () => {
           tidspunkt="20:00"
           hjemmelag="Frankrike"
           bortelag="Marokko"
-          // prediksjonH="50"
-          // prediksjonU="25"
-          // prediksjonB="25"
+          prediksjonH="50"
+          prediksjonU="25"
+          prediksjonB="25"
         />
       </div>
     </>
