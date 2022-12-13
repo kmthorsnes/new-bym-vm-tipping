@@ -1,6 +1,31 @@
+import { useState } from "react";
 import SisteResultatKort from "./SisteResultatKort";
+import { useEffect } from "react";
+
 
 const SisteResultater = () => {
+  // Fetch the latest completed matches from the API
+  const [matches, setMatches] = useState([]);
+  useEffect(() => {
+    async function fetchMatches() {
+      const response = await fetch(
+        "https://worldcupjson.net/matches"
+      );
+      const matches = await response.json();
+      // Filter out only the latest completed matches
+      const latestCompletedMatches = matches.filter((match: { status: string; datetime: string | number | Date; }) => {
+        // Check that the match is completed and is from the last 5 days
+        return (
+          match.status === "completed" &&
+          Date.now() - new Date(match.datetime) < 5 * 24 * 60 * 60 * 1000
+        );
+      });
+      setMatches(latestCompletedMatches);
+    }
+    fetchMatches();
+  }, []);
+
+  // Render the matches in the table
   return (
     <table className="table-auto">
       <thead>
@@ -11,32 +36,17 @@ const SisteResultater = () => {
         </tr>
       </thead>
       <tbody>
-        <SisteResultatKort
-          hjemmelag="Kroatia*"
-          hjemmelagScore={0}
-          bortelag="Brasil"
-          bortelagScore={0}
-        />
-        <SisteResultatKort
-          hjemmelag="Nederland"
-          hjemmelagScore={2}
-          bortelag="Argentina*"
-          bortelagScore={2}
-        />
-        <SisteResultatKort
-          hjemmelag="Marokko"
-          hjemmelagScore={1}
-          bortelag="Portugal"
-          bortelagScore={0}
-        />
-        <SisteResultatKort
-          hjemmelag="England"
-          hjemmelagScore={1}
-          bortelag="Frankrike"
-          bortelagScore={2}
-        />
+        {matches.map(match => (
+          <SisteResultatKort
+            hjemmelag={match.home_team.name}
+            hjemmelagScore={match.home_team.goals}
+            bortelag={match.away_team.name}
+            bortelagScore={match.away_team.goals}
+          />
+        ))}
       </tbody>
     </table>
   );
 };
+
 export default SisteResultater;
