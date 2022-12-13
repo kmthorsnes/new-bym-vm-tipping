@@ -4,19 +4,25 @@ import { useEffect } from "react";
 
 const SisteResultater = () => {
   // Fetch the latest completed matches from the API
-  const [matches, setMatches] = useState<any[]>([])
+  const [matches, setMatches] = useState<any[]>([]);
   useEffect(() => {
     async function fetchMatches() {
       const response = await fetch("https://worldcupjson.net/matches");
       const matches = await response.json();
       // Filter out only the latest completed matches
       const latestCompletedMatches = matches.filter(
-        (match: { status: string; datetime: string | number | Date | any; home_team: any; away_team: any }) => {
+        (match: {
+          status: string;
+          datetime: string | number | Date | any;
+          home_team: any;
+          away_team: any;
+        }) => {
           // Check that the match is completed and is from the last 5 days
           return (
             match.status === "completed" &&
-            Date.now() - new Date(match.datetime) < 5 * 24 * 60 * 60 * 1000
+            Date.now() - new Date(match.datetime).getTime() < 5 * 24 * 60 * 60 * 1000
           );
+
         }
       );
       setMatches(latestCompletedMatches);
@@ -35,15 +41,18 @@ const SisteResultater = () => {
         </tr>
       </thead>
       <tbody>
-        {matches.map((match) => ( // set any type for home_team and away_team
-
-          <SisteResultatKort
-            hjemmelag={match.home_team.name}
-            hjemmelagScore={match.home_team.goals}
-            bortelag={match.away_team.name}
-            bortelagScore={match.away_team.goals}
-          />
-        ))}
+        {matches.map(
+          (
+            match // set any type for home_team and away_team
+          ) => (
+            <SisteResultatKort
+              hjemmelag={match.home_team.name}
+              hjemmelagScore={match.home_team.goals}
+              bortelag={match.away_team.name}
+              bortelagScore={match.away_team.goals}
+            />
+          )
+        )}
       </tbody>
     </table>
   );
