@@ -4,14 +4,14 @@ import { useEffect } from "react";
 
 const SisteResultater = () => {
   // Fetch the latest completed matches from the API
-  const [matches, setMatches] = useState([]);
+  const [matches, setMatches] = useState<any[]>([])
   useEffect(() => {
     async function fetchMatches() {
       const response = await fetch("https://worldcupjson.net/matches");
       const matches = await response.json();
       // Filter out only the latest completed matches
       const latestCompletedMatches = matches.filter(
-        (match: { status: string; datetime: string | Number | Date | any; home_team: any; away_team: any }) => {
+        (match: { status: string; datetime: string | number | Date | any; home_team: any; away_team: any }) => {
           // Check that the match is completed and is from the last 5 days
           return (
             match.status === "completed" &&
