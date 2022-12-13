@@ -20,7 +20,7 @@ import SisteResultater from "./siste-resultater/SisteResultater";
 import NesteKamper from "./neste-kamper/NesteKamper";
 import Resultatliste from "./resultatliste/Resultatliste";
 import Livedata from "./data/Livedata";
-import LastUpdated from "./sistOppdatert/SistOppdatert";
+// import LastUpdated from "./sistOppdatert/SistOppdatert";
 
 const playRandomSound = () => {
   const sounds = [fart, perfectfart, su];
