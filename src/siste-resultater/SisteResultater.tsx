@@ -2,24 +2,23 @@ import { useState } from "react";
 import SisteResultatKort from "./SisteResultatKort";
 import { useEffect } from "react";
 
-
 const SisteResultater = () => {
   // Fetch the latest completed matches from the API
   const [matches, setMatches] = useState([]);
   useEffect(() => {
     async function fetchMatches() {
-      const response = await fetch(
-        "https://worldcupjson.net/matches"
-      );
+      const response = await fetch("https://worldcupjson.net/matches");
       const matches = await response.json();
       // Filter out only the latest completed matches
-      const latestCompletedMatches = matches.filter((match: { status: string; datetime: string | number | Date; }) => {
-        // Check that the match is completed and is from the last 5 days
-        return (
-          match.status === "completed" &&
-          Date.now() - new Date(match.datetime) < 5 * 24 * 60 * 60 * 1000
-        );
-      });
+      const latestCompletedMatches = matches.filter(
+        (match: { status: string; datetime: string | number | Date }) => {
+          // Check that the match is completed and is from the last 5 days
+          return (
+            match.status === "completed" &&
+            Date.now() - new Date(match.datetime) < 5 * 24 * 60 * 60 * 1000
+          );
+        }
+      );
       setMatches(latestCompletedMatches);
     }
     fetchMatches();
@@ -36,7 +35,7 @@ const SisteResultater = () => {
         </tr>
       </thead>
       <tbody>
-        {matches.map(match => (
+        {matches.map((match) => (
           <SisteResultatKort
             hjemmelag={match.home_team.name}
             hjemmelagScore={match.home_team.goals}
