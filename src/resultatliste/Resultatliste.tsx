@@ -18,6 +18,8 @@ const sortByTotalScore = () => {
       b.semiFinalist2 +
       b.semiFinalist3 +
       b.semiFinalist4 +
+      b.sf1 +
+      b.sf2 +
       b.finalist1 +
       b.finalist2 +
       b.champion -
@@ -34,6 +36,8 @@ const sortByTotalScore = () => {
         a.semiFinalist2 +
         a.semiFinalist3 +
         a.semiFinalist4 +
+        a.sf1 +
+        a.sf2 +
         a.finalist1 +
         a.finalist2 +
         a.champion)
@@ -84,6 +88,8 @@ const addRanking = () => {
         item.semiFinalist2 +
         item.semiFinalist3 +
         item.semiFinalist4 +
+        item.sf1 +
+        item.sf2 +
         item.finalist1 +
         item.finalist2 +
         item.champion !==
@@ -106,6 +112,8 @@ const addRanking = () => {
         item.semiFinalist2 +
         item.semiFinalist3 +
         item.semiFinalist4 +
+        item.sf1 +
+        item.sf2 +
         item.finalist1 +
         item.finalist2 +
         item.champion
@@ -124,7 +132,7 @@ const Resultatliste = () => {
         </div>
         <div>
           <div className="text-left text-xs ">
-            #. Navn: Poeng (Siste poeng) [Detaljer*]
+            #. Navn: Poeng (Siste kamppoeng) [Detaljer*]
           </div>
         </div>
       </div>
@@ -149,6 +157,8 @@ const Resultatliste = () => {
               semiFinalist2: number;
               semiFinalist3: number;
               semiFinalist4: number;
+              sf1: number;
+              sf2: number;
               finalist1: number;
               finalist2: number;
               champion: number;
@@ -171,11 +181,13 @@ const Resultatliste = () => {
                   item.semiFinalist2 +
                   item.semiFinalist3 +
                   item.semiFinalist4 +
+                  item.sf1 +
+                  item.sf2 +
                   item.finalist1 +
                   item.finalist2 + item.champion
                    }
                 {"  "}
-                <span className="text-xs">({item.qf4})</span>
+                <span className="text-xs">({item.sf1})</span>
                 <span className="text-sm">
                   [
                   <span className="text-bumanguéSBlue-200">
@@ -198,7 +210,12 @@ const Resultatliste = () => {
                     {item.qf1 + item.qf2 + item.qf3 + item.qf4}
                   </span>{" "}
                   +{" "}
-                  <span className="text-red-500">{item.semiFinalist1 + item.semiFinalist2 + item.semiFinalist3 + item.semiFinalist4}</span>]
+                  <span className="text-red-500">{item.semiFinalist1 + item.semiFinalist2 + item.semiFinalist3 + item.semiFinalist4}</span>
+                  {" "}+{" "}
+                  <span className="text-purple-700">{item.sf1 + item.sf2}</span>
+                  {" "}+{" "}
+                  <span className="text-teal-500">{item.finalist1 + item.finalist2}</span>
+                  ]
                 </span>
               </div>
             </div>
@@ -224,6 +241,10 @@ const Resultatliste = () => {
               Kvartfinaleresultattipping
             </span>{" "}
             + <span className="text-red-500">Semifinalister</span>
+            {" "}
+            + <span className="text-purple-700">Semifinaleresultatspill</span>
+            {" "}
+            + <span className="text-teal-500">Finalister</span>
           </span>
         </div>
       </div>

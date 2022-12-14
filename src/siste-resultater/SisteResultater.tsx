@@ -16,10 +16,11 @@ const SisteResultater = () => {
           datetime: string | number | Date | any;
           home_team: any;
           away_team: any;
+          stage_name: string;
         }) => {
           // Check that the match is completed and is from the last 5 days
           return (
-            match.status === "completed" &&
+            match.status === "completed" && match.stage_name === "Semi-final" &&
             Date.now() - new Date(match.datetime).getTime() < 5 * 24 * 60 * 60 * 1000
           );
 
