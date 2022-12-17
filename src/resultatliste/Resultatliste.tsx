@@ -20,9 +20,22 @@ const sortByTotalScore = () => {
       b.semiFinalist4 +
       b.sf1 +
       b.sf2 +
+      b.bf1 +
       b.finalist1 +
       b.finalist2 +
-      b.champion -
+      b.champion +
+      b.topScorer +
+      b.red40 +
+      b.mostGoals41 +
+      b.mostGoals1_42 +
+      b.mostGoals2_43 +
+      b.mostGoals3_44 +
+      b.mostGoals4_45 +
+      b.mostGoals5_46 +
+      b.goalsTotalPlayers_47 +
+      b.goalsTotalCountries_48 +
+      b.longestCountry1_49 +
+      b.longestCountry2_50 -
       (a.groupStageScore +
         a.groupStageXtra +
         a.eightsMatchesPt1 +
@@ -38,9 +51,22 @@ const sortByTotalScore = () => {
         a.semiFinalist4 +
         a.sf1 +
         a.sf2 +
+        a.bf1 +
         a.finalist1 +
         a.finalist2 +
-        a.champion)
+        a.champion +
+        a.topScorer +
+        a.red40 +
+        a.mostGoals41 +
+        a.mostGoals1_42 +
+        a.mostGoals2_43 +
+        a.mostGoals3_44 +
+        a.mostGoals4_45 +
+        a.mostGoals5_46 +
+        a.goalsTotalPlayers_47 +
+        a.goalsTotalCountries_48 +
+        a.longestCountry1_49 +
+        a.longestCountry2_50)
     );
   });
 };
@@ -49,7 +75,8 @@ const sortByTotalScore = () => {
 
 const addRanking = () => {
   data.scores.sort((a, b) => {
-    const scoreA = a.groupStageScore +
+    const scoreA =
+      a.groupStageScore +
       a.groupStageXtra +
       a.eightsMatchesPt1 +
       a.eightsMatchesPt2 +
@@ -64,10 +91,24 @@ const addRanking = () => {
       a.semiFinalist4 +
       a.sf1 +
       a.sf2 +
+      a.bf1 +
       a.finalist1 +
       a.finalist2 +
-      a.champion;
-    const scoreB = b.groupStageScore +
+      a.champion +
+      a.topScorer +
+      a.red40 +
+      a.mostGoals41 +
+      a.mostGoals1_42 +
+      a.mostGoals2_43 +
+      a.mostGoals3_44 +
+      a.mostGoals4_45 +
+      a.mostGoals5_46 +
+      a.goalsTotalPlayers_47 +
+      a.goalsTotalCountries_48 +
+      a.longestCountry1_49 +
+      a.longestCountry2_50;
+    const scoreB =
+      b.groupStageScore +
       b.groupStageXtra +
       b.eightsMatchesPt1 +
       b.eightsMatchesPt2 +
@@ -82,9 +123,22 @@ const addRanking = () => {
       b.semiFinalist4 +
       b.sf1 +
       b.sf2 +
+      b.bf1 +
       b.finalist1 +
       b.finalist2 +
-      b.champion;
+      b.champion +
+      b.topScorer +
+      b.red40 +
+      b.mostGoals41 +
+      b.mostGoals1_42 +
+      b.mostGoals2_43 +
+      b.mostGoals3_44 +
+      b.mostGoals4_45 +
+      b.mostGoals5_46 +
+      b.goalsTotalPlayers_47 +
+      b.goalsTotalCountries_48 +
+      b.longestCountry1_49 +
+      b.longestCountry2_50;
     if (scoreA < scoreB) {
       return 1;
     } else if (scoreA > scoreB) {
@@ -97,7 +151,8 @@ const addRanking = () => {
   let previousScore = -1;
   let ranking = 1;
   data.scores.forEach((item, index) => {
-    const score = item.groupStageScore +
+    const score =
+      item.groupStageScore +
       item.groupStageXtra +
       item.eightsMatchesPt1 +
       item.eightsMatchesPt2 +
@@ -112,9 +167,22 @@ const addRanking = () => {
       item.semiFinalist4 +
       item.sf1 +
       item.sf2 +
+      item.bf1 +
       item.finalist1 +
       item.finalist2 +
-      item.champion;
+      item.champion +
+      item.topScorer +
+      item.red40 +
+      item.mostGoals41;
+    item.mostGoals1_42 +
+      item.mostGoals2_43 +
+      item.mostGoals3_44 +
+      item.mostGoals4_45 +
+      item.mostGoals5_46 +
+      item.goalsTotalPlayers_47 +
+      item.goalsTotalCountries_48 +
+      item.longestCountry1_49 +
+      item.longestCountry2_50;
     if (score !== previousScore) {
       ranking = index + 1;
       previousScore = score;
@@ -140,9 +208,7 @@ const Resultatliste = () => {
         </div>
       </div>
       <div>
-        {data.scores.
-
-        map(
+        {data.scores.map(
           (
             item: {
               name: string;
@@ -162,14 +228,28 @@ const Resultatliste = () => {
               semiFinalist4: number;
               sf1: number;
               sf2: number;
+              bf1: number;
+              f: number;
+              champion: number;
+              topScorer: number;
+              red40: number;
+              mostGoals41: number;
+              mostGoals1_42: number;
+              mostGoals2_43: number;
+              mostGoals3_44: number;
+              mostGoals4_45: number;
+              mostGoals5_46: number;
+              goalsTotalPlayers_47: number;
+              goalsTotalCountries_48: number;
+              longestCountry1_49: number;
+              longestCountry2_50: number;
               finalist1: number;
               finalist2: number;
-              champion: number;
             },
             index
           ) => (
             <div key={item.name}>
-              <div className="flex items-center">
+              <div className="flex">
                 {item.ranking}. {item.name}:{" "}
                 {item.groupStageXtra +
                   item.groupStageScore +
@@ -186,11 +266,25 @@ const Resultatliste = () => {
                   item.semiFinalist4 +
                   item.sf1 +
                   item.sf2 +
+                  item.bf1 +
                   item.finalist1 +
-                  item.finalist2 + item.champion
-                   }
+                  item.finalist2 +
+                  item.f +
+                  item.champion +
+                  item.topScorer +
+                  item.red40 +
+                  item.mostGoals41 +
+                  item.mostGoals1_42 +
+                  item.mostGoals2_43 +
+                  item.mostGoals3_44 +
+                  item.mostGoals4_45 +
+                  item.mostGoals5_46 +
+                  item.goalsTotalPlayers_47 +
+                  item.goalsTotalCountries_48 +
+                  item.longestCountry1_49 +
+                  item.longestCountry2_50}
                 {"  "}
-                <span className="text-xs">({item.sf2})</span>
+                <span className="text-xs">({item.bf1})</span>
                 <span className="text-sm">
                   [
                   <span className="text-bumanguéSBlue-200">
@@ -213,11 +307,69 @@ const Resultatliste = () => {
                     {item.qf1 + item.qf2 + item.qf3 + item.qf4}
                   </span>{" "}
                   +{" "}
-                  <span className="text-red-500">{item.semiFinalist1 + item.semiFinalist2 + item.semiFinalist3 + item.semiFinalist4}</span>
-                  {" "}+{" "}
-                  <span className="text-purple-700">{item.sf1 + item.sf2}</span>
-                  {" "}+{" "}
-                  <span className="text-teal-500">{item.finalist1 + item.finalist2}</span>
+                  <span className="text-red-500">
+                    {item.semiFinalist1 +
+                      item.semiFinalist2 +
+                      item.semiFinalist3 +
+                      item.semiFinalist4}
+                  </span>{" "}
+                  +{" "}
+                  <span className="text-purple-700">{item.sf1 + item.sf2}</span>{" "}
+                  +{" "}
+                  <span className="text-teal-500">
+                    {item.finalist1 + item.finalist2}
+                  </span>{" "}
+                  + <span className="text-amber-700">{item.bf1}</span>+
+                  {/* {" "} */}
+                  {/* <span className="italic text-red-500">{item.f}</span> +{" "}
+                  <span className="italic text-blue-500">{item.champion}</span>+{" "} */}
+                  {/* <span className="italic text-green-500">
+                    {item.topScorer}
+                  </span>{" "}
+                  +{" "}
+                  <span className="italic text-black-default">
+                    {item.red40}
+                  </span>{" "}
+                  +{" "}
+                  <span className="italic text-purple-500">
+                    {item.mostGoals41}
+                  </span>{" "}
+                  +{" "}
+                  <span className="italic text-goldenrod-default">
+                    {item.mostGoals1_42}
+                  </span>{" "}
+                  +{" "}
+                  <span className="italic text-wcbeige-600">
+                    {item.mostGoals2_43}
+                  </span>{" "}
+                  +{" "}
+                  <span className="italic text-teal-500">
+                    {item.mostGoals3_44}
+                  </span>{" "}
+                  +{" "}
+                  <span className="italic text-amber-500">
+                    {item.mostGoals4_45}
+                  </span>{" "}
+                  +{" "}
+                  <span className="italic text-red-500">
+                    {item.mostGoals5_46}
+                  </span>{" "}
+                  +{" "}
+                  <span className="italic text-blue-500">
+                    {item.goalsTotalPlayers_47}
+                  </span>{" "}
+                  +{" "}
+                  <span className="italic text-green-500">
+                    {item.goalsTotalCountries_48}
+                  </span>{" "}
+                  +{" "}
+                  <span className="italic text-black-default">
+                    {item.longestCountry1_49}
+                  </span>{" "}
+                  +{" "}
+                  <span className="italic text-pink-500">
+                    {item.longestCountry2_50}
+                  </span> */}
                   ]
                 </span>
               </div>
@@ -225,7 +377,7 @@ const Resultatliste = () => {
           )
         )}
 
-        <div>
+        <div className="leading-4">
           <span className="text-xs">
             *
             <span className="text-bumanguéSBlue-200">
@@ -239,15 +391,48 @@ const Resultatliste = () => {
             <span className="text-wcyellow-600">
               1/8-finalerresultattipping
             </span>{" "}
-            + {" "}<span className="text-green-default">Kvartfinalister</span>{" "}+{" "}
+            + <span className="text-green-default">Kvartfinalister</span> +{" "}
             <span className="text-black-default">
               Kvartfinaleresultattipping
             </span>{" "}
-            + <span className="text-red-500">Semifinalister</span>
-            {" "}
-            + <span className="text-purple-700">Semifinaleresultatspill</span>
-            {" "}
-            + <span className="text-teal-500">Finalister</span>
+            +<span className="text-red-500">Semifinalister</span> +{" "}
+            <span className="text-purple-700">Semifinaleresultatspill</span> +{" "}
+            <span className="text-teal-500">Finalister</span> +{" "}
+            <span className="text-amber-500">Bronsjefinaleresultatspill</span> +{" "}
+            <span className="italic text-red-500">Finaleresultatspill</span> +{" "}
+            <span className="italic text-blue-500">Verdensmester</span>+{" "}
+            <span className="italic text-green-500">39.Toppscorer</span> +{" "}
+            <span className="italic text-black-default">
+              40. Flest røde kort
+            </span>{" "}
+            +{" "}
+            <span className="italic text-purple-500">
+              41. Flest mål i enkeltkamp
+            </span>{" "}
+            +{" "}
+            <span className="italic text-goldenrod-default">
+              42. Flest mål gr 1
+            </span>{" "}
+            +{" "}
+            <span className="italic text-wcbeige-600">43. Flest mål gr 2</span>{" "}
+            + <span className="italic text-teal-500">44. Flest mål gr 3</span> +{" "}
+            <span className="italic text-amber-500">45. Flest mål gr 4</span> +{" "}
+            <span className="italic text-red-500">46. Flest mål gr 5</span> +{" "}
+            <span className="italic text-blue-500">
+              47. Mål totalt av spillere
+            </span>{" "}
+            +{" "}
+            <span className="italic text-green-500">
+              48. Mål totalt av land
+            </span>{" "}
+            +{" "}
+            <span className="italic text-black-default">
+              49. Kommer lengst av land 1
+            </span>{" "}
+            +{" "}
+            <span className="italic text-pink-500">
+              50. Kommer lengst av land 2
+            </span>
           </span>
         </div>
       </div>

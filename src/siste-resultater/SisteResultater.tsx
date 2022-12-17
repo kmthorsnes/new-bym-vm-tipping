@@ -20,10 +20,13 @@ const SisteResultater = () => {
         }) => {
           // Check that the match is completed and is from the last 5 days
           return (
-            match.status === "completed" && match.stage_name === "Semi-final" &&
-            Date.now() - new Date(match.datetime).getTime() < 5 * 24 * 60 * 60 * 1000
-          );
+            match.status === "completed" &&
+            // match.stage_name === "Semi-final"
+            //   match.stage_name === "Play-off for third place")
 
+            Date.now() - new Date(match.datetime).getTime() <
+              5 * 24 * 60 * 60 * 1000
+          );
         }
       );
       setMatches(latestCompletedMatches);
