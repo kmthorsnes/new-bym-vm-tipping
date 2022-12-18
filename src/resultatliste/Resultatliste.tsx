@@ -23,6 +23,7 @@ const sortByTotalScore = () => {
       b.bf1 +
       b.finalist1 +
       b.finalist2 +
+      b.f +
       b.champion +
       b.topScorer +
       b.red40 +
@@ -54,6 +55,7 @@ const sortByTotalScore = () => {
         a.bf1 +
         a.finalist1 +
         a.finalist2 +
+        a.f +
         a.champion +
         a.topScorer +
         a.red40 +
@@ -94,6 +96,7 @@ const addRanking = () => {
       a.bf1 +
       a.finalist1 +
       a.finalist2 +
+      a.f +
       a.champion +
       a.topScorer +
       a.red40 +
@@ -170,11 +173,12 @@ const addRanking = () => {
       item.bf1 +
       item.finalist1 +
       item.finalist2 +
+      item.f +
       item.champion +
       item.topScorer +
       item.red40 +
-      item.mostGoals41;
-    item.mostGoals1_42 +
+      item.mostGoals41 +
+      item.mostGoals1_42 +
       item.mostGoals2_43 +
       item.mostGoals3_44 +
       item.mostGoals4_45 +
@@ -283,8 +287,7 @@ const Resultatliste = () => {
                     item.goalsTotalPlayers_47 +
                     item.goalsTotalCountries_48 +
                     item.longestCountry1_49 +
-                    item.longestCountry2_50}{" "}
-                  ({item.f})
+                    item.longestCountry2_50}
                 </td>
                 <div className="flex w-full flex-wrap items-center text-sm">
                   [
@@ -322,52 +325,31 @@ const Resultatliste = () => {
                   </span>{" "}
                   + <span className="text-amber-700">{item.bf1}</span>+{" "}
                   <span className="text-red-500">{item.f}</span> +{" "}
-                  <span className="italic text-blue-500">{item.champion}</span>+{" "}
-                  <span className="italic text-green-500">
-                    {item.topScorer}
-                  </span>{" "}
-                  +{" "}
-                  <span className="italic text-black-default">
-                    {item.red40}
-                  </span>{" "}
-                  +{" "}
-                  <span className="italic text-purple-500">
-                    {item.mostGoals41}
-                  </span>{" "}
-                  +{" "}
-                  <span className="italic text-goldenrod-default">
+                  <span className=" text-blue-500">{item.champion}</span>+{" "}
+                  <span className=" text-green-500">{item.topScorer}</span> +{" "}
+                  <span className=" text-black-default">{item.red40}</span> +{" "}
+                  <span className="text-purple-500">{item.mostGoals41}</span> +{" "}
+                  <span className="text-goldenrod-default">
                     {item.mostGoals1_42}
                   </span>{" "}
                   +{" "}
-                  <span className="italic text-wcbeige-600">
-                    {item.mostGoals2_43}
-                  </span>{" "}
-                  +{" "}
-                  <span className="italic text-teal-500">
-                    {item.mostGoals3_44}
-                  </span>{" "}
-                  +{" "}
-                  <span className="italic text-amber-500">
-                    {item.mostGoals4_45}
-                  </span>{" "}
-                  +{" "}
-                  <span className="italic text-red-500">
-                    {item.mostGoals5_46}
-                  </span>{" "}
-                  +{" "}
-                  <span className="italic text-blue-500">
+                  <span className="text-wcbeige-600">{item.mostGoals2_43}</span>{" "}
+                  + <span className="text-teal-500">{item.mostGoals3_44}</span>{" "}
+                  + <span className="text-amber-500">{item.mostGoals4_45}</span>{" "}
+                  + <span className="text-red-500">{item.mostGoals5_46}</span> +{" "}
+                  <span className="text-blue-500">
                     {item.goalsTotalPlayers_47}
                   </span>{" "}
                   +{" "}
-                  <span className="italic text-green-500">
+                  <span className="text-green-500">
                     {item.goalsTotalCountries_48}
                   </span>{" "}
                   +{" "}
-                  <span className="italic text-black-default">
+                  <span className="text-black-default">
                     {item.longestCountry1_49}
                   </span>{" "}
                   +{" "}
-                  <span className="italic text-pink-500">
+                  <span className="text-pink-500">
                     {item.longestCountry2_50}
                   </span>
                   ]
@@ -396,35 +378,22 @@ const Resultatliste = () => {
           <span className="text-purple-700">Semifinaleresultatspill</span> +{" "}
           <span className="text-teal-500">Finalister</span> +{" "}
           <span className="text-amber-500">Bronsjefinaleresultatspill</span> +{" "}
-          <span className=" text-red-500">Finaleresultatspill</span> +{" "}
-          <span className="italic text-blue-500">Verdensmester</span>+{" "}
-          <span className="italic text-green-500">39.Toppscorer</span> +{" "}
-          <span className="italic text-black-default">40. Flest røde kort</span>{" "}
-          +{" "}
-          <span className="italic text-purple-500">
-            41. Flest mål i enkeltkamp
-          </span>{" "}
-          +{" "}
-          <span className="italic text-goldenrod-default">
-            42. Flest mål gr 1
-          </span>{" "}
-          + <span className="italic text-wcbeige-600">43. Flest mål gr 2</span>{" "}
-          + <span className="italic text-teal-500">44. Flest mål gr 3</span> +{" "}
-          <span className="italic text-amber-500">45. Flest mål gr 4</span> +{" "}
-          <span className="italic text-red-500">46. Flest mål gr 5</span> +{" "}
-          <span className="italic text-blue-500">
-            47. Mål totalt av spillere
-          </span>{" "}
-          +{" "}
-          <span className="italic text-green-500">48. Mål totalt av land</span>{" "}
-          +{" "}
-          <span className="italic text-black-default">
+          <span className="text-red-500">Finaleresultatspill</span> +{" "}
+          <span className="text-blue-500">Verdensmester</span>+{" "}
+          <span className="text-green-500">39.Toppscorer</span> +{" "}
+          <span className="text-black-default">40. Flest røde kort</span> +{" "}
+          <span className="text-purple-500">41. Flest mål i enkeltkamp</span> +{" "}
+          <span className="text-goldenrod-default">42. Flest mål gr 1</span> +{" "}
+          <span className="text-wcbeige-600">43. Flest mål gr 2</span> +{" "}
+          <span className="text-teal-500">44. Flest mål gr 3</span> +{" "}
+          <span className="text-amber-500">45. Flest mål gr 4</span> +{" "}
+          <span className="text-red-500">46. Flest mål gr 5</span> +{" "}
+          <span className="text-blue-500">47. Mål totalt av spillere</span> +{" "}
+          <span className="text-green-500">48. Mål totalt av land</span> +{" "}
+          <span className="text-black-default">
             49. Kommer lengst av land 1
           </span>{" "}
-          +{" "}
-          <span className="italic text-pink-500">
-            50. Kommer lengst av land 2
-          </span>
+          + <span className="text-pink-500">50. Kommer lengst av land 2</span>
         </span>
       </div>
     </>

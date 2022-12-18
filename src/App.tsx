@@ -16,10 +16,13 @@ import Wclogo from "./wclogo/Wclogo";
 import fart from "././assets/sounds/fart.mp3";
 import perfectfart from "././assets/sounds/perfect-fart.mp3";
 import su from "././assets/sounds/cr_suuu.mp3";
+import champions from "././assets/sounds/music/champions.mp3";
+import levelClear from "././assets/sounds/music/levelClear.mp3";
 import SisteResultater from "./siste-resultater/SisteResultater";
 import NesteKamper from "./neste-kamper/NesteKamper";
 import Resultatliste from "./resultatliste/Resultatliste";
 import Livedata from "./data/Livedata";
+import Argentina from "././assets/images/argentina.gif";
 // import LastUpdated from "./sistOppdatert/SistOppdatert";
 
 const playRandomSound = () => {
@@ -28,6 +31,17 @@ const playRandomSound = () => {
   const audio = new Audio(randomSound);
   audio.play();
 };
+
+const playChampSound = () => {
+  const audio = new Audio(champions);
+  audio.play();
+};
+
+const playlevelComplete = () => {
+  const audio = new Audio(levelClear);
+  audio.play();
+};
+
 
 function App() {
   return (
@@ -54,11 +68,11 @@ function App() {
                     (item: { name: string; ranking: number; imgUrl: any }) => (
                       <div
                         key={item.name}
-                        className="object-fit relative flex w-full transform cursor-pointer justify-center transition duration-500 hover:scale-110"
+                        className="object-fit relative flex w-full transform cursor-pointer justify-center transition duration-500 hover:rotate-180  hover:scale-110"
                       >
                         <img
-                          title="IKKE KLIKK 😏"
-                          onClick={playRandomSound}
+                          title="👑"
+                          onClick={playlevelComplete}
                           className="h-60 w-auto"
                           src={`/profiles/card/${item.name
                             .toLowerCase()
@@ -99,7 +113,7 @@ function App() {
                       <div
                         title="IKKE KLIKK 😏"
                         key={item.name}
-                        className="object-fit flex w-full transform cursor-pointer justify-center transition duration-500 hover:scale-110"
+                        className="object-fit flex w-full transform cursor-pointer justify-center transition duration-500 hover:scale-110  "
                       >
                         <img
                           onClick={playRandomSound}
@@ -119,11 +133,15 @@ function App() {
               <div className="m-4 ">
                 <SisteResultater />
               </div>
-              <div className="m-4">
+              {/* <div className="m-4">
                 <NesteKamper />
-              </div>
+              </div> */}
               <div className="m-4">
-               <Livedata />
+                <Livedata />
+              </div>
+              <div className="w-full cursor-pointer" onClick={playChampSound}>
+                {" "}
+<div className="div"><img src={Argentina} alt=""></img></div>
               </div>
             </div>
           </div>
