@@ -286,7 +286,7 @@ const Resultatliste = () => {
                     item.longestCountry2_50}{" "}
                   ({item.f})
                 </td>
-                <div className="text-sm flex items-center w-full flex-wrap">
+                <div className="flex w-full flex-wrap items-center text-sm">
                   [
                   <span className="text-bumanguéSBlue-200">
                     {item.groupStageScore}
@@ -320,9 +320,8 @@ const Resultatliste = () => {
                   <span className="text-teal-500">
                     {item.finalist1 + item.finalist2}
                   </span>{" "}
-                  + <span className="text-amber-700">{item.bf1}</span>+
-                  {" "}
-                  <span className="italic text-red-500">{item.f}</span> +{" "}
+                  + <span className="text-amber-700">{item.bf1}</span>+{" "}
+                  <span className="text-red-500">{item.f}</span> +{" "}
                   <span className="italic text-blue-500">{item.champion}</span>+{" "}
                   <span className="italic text-green-500">
                     {item.topScorer}
@@ -397,7 +396,7 @@ const Resultatliste = () => {
           <span className="text-purple-700">Semifinaleresultatspill</span> +{" "}
           <span className="text-teal-500">Finalister</span> +{" "}
           <span className="text-amber-500">Bronsjefinaleresultatspill</span> +{" "}
-          <span className="italic text-red-500">Finaleresultatspill</span> +{" "}
+          <span className=" text-red-500">Finaleresultatspill</span> +{" "}
           <span className="italic text-blue-500">Verdensmester</span>+{" "}
           <span className="italic text-green-500">39.Toppscorer</span> +{" "}
           <span className="italic text-black-default">40. Flest røde kort</span>{" "}
