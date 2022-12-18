@@ -17,7 +17,7 @@ import fart from "././assets/sounds/fart.mp3";
 import perfectfart from "././assets/sounds/perfect-fart.mp3";
 import su from "././assets/sounds/cr_suuu.mp3";
 import champions from "././assets/sounds/music/champions.mp3";
-import levelClear from "././assets/sounds/music/levelClear.mp3";
+import levelClear from "././assets/sounds/music/levelclear.mp3";
 import SisteResultater from "./siste-resultater/SisteResultater";
 import NesteKamper from "./neste-kamper/NesteKamper";
 import Resultatliste from "./resultatliste/Resultatliste";
