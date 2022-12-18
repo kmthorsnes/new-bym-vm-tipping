@@ -45,7 +45,6 @@ function App() {
           <div className="flex h-full w-full grow flex-row justify-between text-2xl mobile-only:flex-col">
             <div className="m-4 w-1/3 mobile-only:w-full phablet:mt-12 phablet:ml-12">
               <Resultatliste />
-              <Livedata />
             </div>
             <div className="flex h-full w-1/3 flex-col items-center rounded-md border-2 border-goldenrod-default p-4  mobile-only:w-full ">
               <div className="flex w-full flex-shrink flex-row items-center justify-center">
@@ -122,6 +121,9 @@ function App() {
               </div>
               <div className="m-4">
                 <NesteKamper />
+              </div>
+              <div className="m-4">
+               <Livedata />
               </div>
             </div>
           </div>
