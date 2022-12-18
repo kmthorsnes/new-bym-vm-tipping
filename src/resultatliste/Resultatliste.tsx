@@ -249,9 +249,9 @@ const Resultatliste = () => {
               index
             ) => (
               <tr key={item.name}>
-                <td>{item.ranking}</td>
-                <td>{item.name}</td>
-                <td>
+                <td className="text-sm">{item.ranking}</td>
+                <td className="text-sm">{item.name}</td>
+                <td className="text-sm">
                   {item.groupStageXtra +
                     item.groupStageScore +
                     item.eightsMatchesPt1 +
@@ -284,9 +284,9 @@ const Resultatliste = () => {
                     item.goalsTotalCountries_48 +
                     item.longestCountry1_49 +
                     item.longestCountry2_50}{" "}
-                  ({item.bf1})
+                  ({item.f})
                 </td>
-                <div className="text-sm flex justify-center items-center w-full flex-wrap">
+                <div className="text-sm flex items-center w-full flex-wrap">
                   [
                   <span className="text-bumanguéSBlue-200">
                     {item.groupStageScore}
@@ -321,10 +321,10 @@ const Resultatliste = () => {
                     {item.finalist1 + item.finalist2}
                   </span>{" "}
                   + <span className="text-amber-700">{item.bf1}</span>+
-                  {/* {" "} */}
-                  {/* <span className="italic text-red-500">{item.f}</span> +{" "}
-                  <span className="italic text-blue-500">{item.champion}</span>+{" "} */}
-                  {/* <span className="italic text-green-500">
+                  {" "}
+                  <span className="italic text-red-500">{item.f}</span> +{" "}
+                  <span className="italic text-blue-500">{item.champion}</span>+{" "}
+                  <span className="italic text-green-500">
                     {item.topScorer}
                   </span>{" "}
                   +{" "}
@@ -370,7 +370,7 @@ const Resultatliste = () => {
                   +{" "}
                   <span className="italic text-pink-500">
                     {item.longestCountry2_50}
-                  </span> */}
+                  </span>
                   ]
                 </div>
               </tr>
