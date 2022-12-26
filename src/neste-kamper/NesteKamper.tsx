@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import SisteResultatKort from "../siste-resultater/SisteResultatKort";
-import { translate } from "../utils/translate";
+import { translate } from "../utils/helperFunctions";
 
 const SisteResultater = () => {
   // Fetch the latest completed matches from the API

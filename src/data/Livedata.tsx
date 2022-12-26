@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { translate } from "../utils/translate";
-import { capitalize } from "../utils/capitalize";
+import { translateCountry, capitalize } from "../utils/helperFunctions";
 
 const Livedata = () => {
   const getData = async (url: string) => {
@@ -40,9 +39,9 @@ const Livedata = () => {
               name: string;
             }) => (
               <div key={item.id}>
-                {capitalize(translate(item.home_team.name))}{" "}
+                {capitalize(translateCountry(item.home_team.name))}{" "}
                 {item.home_team.goals} - {item.away_team.goals}{" "}
-                {capitalize(translate(item.away_team.name))}{" "}
+                {capitalize(translateCountry(item.away_team.name))}{" "}
               </div>
             )
           )}
