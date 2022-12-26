@@ -10,42 +10,41 @@ const Livedata = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      getData("https://worldcupjson.net/matches/current").then((data) =>
-        setApiData(data)
+      getData(
+        "https://kmthorsnes.github.io/bym-vm-tipping-dummy-data/livedata.json"
+      ).then((data) =>
+        data.filter((match: { status: string }) => match.status === "in_progress")
+      ).then((data) =>
+      setApiData(data));
+      console.log("Live match data");
 
-      );
-      console.log('data fetched')
     }, 5000);
     return () => clearInterval(interval);
   }, []);
 
 
-
-  console.log(apidata);
-
-
-
   return (
     <>
-      {apidata.length !== 0 && (
-        <div>
-          <div className="font-2xl font-bold">Live score</div>
-          {apidata.map(
-            (item: {
-              away_team: any;
-              home_team: any;
-              id: number;
-              location: string;
-              name: string;
-            }) => (
-              <div key={item.id}>
-                {item.home_team.name} {item.home_team.goals} -{" "}
-                {item.away_team.goals} {item.away_team.name}{" "}
-              </div>
-            )
+      {apidata.length !== 0 &&
+      (
+            <div>
+              <div className="font-2xl font-bold">Live score</div>
+              {apidata.map(
+                (item: {
+                  away_team: any;
+                  home_team: any;
+                  id: number;
+                  location: string;
+                  name: string;
+                }) => (
+                  <div key={item.id}>
+                    {item.home_team.name} {item.home_team.goals} -{" "}
+                    {item.away_team.goals} {item.away_team.name}{" "}
+                  </div>
+                )
+              )}
+            </div>
           )}
-        </div>
-      )}
     </>
   );
 };

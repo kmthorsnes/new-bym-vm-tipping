@@ -7,7 +7,7 @@ const SisteResultater = () => {
   const [matches, setMatches] = useState<any[]>([]);
   useEffect(() => {
     async function fetchMatches() {
-      const response = await fetch("https://worldcupjson.net/matches");
+      const response = await fetch("https://kmthorsnes.github.io/bym-vm-tipping-dummy-data/livedata.json");
       const matches = await response.json();
       // Filter out only the latest completed matches
       const latestCompletedMatches = matches.filter(
