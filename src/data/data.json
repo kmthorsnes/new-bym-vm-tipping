@@ -9,6 +9,11 @@
       ],
       "predictions": [
         {
+          "match_id": 1,
+          "home_team_score": 0,
+          "away_team_score": 0
+        },
+        {
           "match_id": 62,
           "home_team_score": 0,
           "away_team_score": 0
@@ -22,6 +27,13 @@
           "match_id": 64,
           "home_team_score": 0,
           "away_team_score": 0
+        }
+      ],
+      "points": [
+        {
+          "id": 1,
+          "scorePoints": 0,
+          "winnerPoints": 0
         }
       ],
       "groupStageXtra": 19,
@@ -72,6 +84,11 @@
       ],
       "predictions": [
         {
+          "match_id": 1,
+          "home_team_score": 0,
+          "away_team_score": 0
+        },
+        {
           "match_id": 62,
           "home_team_score": 0,
           "away_team_score": 0
@@ -85,6 +102,13 @@
           "match_id": 64,
           "home_team_score": 0,
           "away_team_score": 0
+        }
+      ],
+      "scores": [
+        {
+          "id": 1,
+          "scorePoints": 0,
+          "winnerPoints": 0
         }
       ],
       "groupStageXtra": 19,
@@ -135,6 +159,11 @@
       ],
       "predictions": [
         {
+          "match_id": 1,
+          "home_team_score": 0,
+          "away_team_score": 1
+        },
+        {
           "match_id": 62,
           "home_team_score": 0,
           "away_team_score": 0
@@ -148,6 +177,13 @@
           "match_id": 64,
           "home_team_score": 0,
           "away_team_score": 0
+        }
+      ],
+      "scores": [
+        {
+          "id": 1,
+          "scorePoints": 0,
+          "winnerPoints": 0
         }
       ],
       "groupStageXtra": 12,
@@ -198,6 +234,11 @@
       ],
       "predictions": [
         {
+          "match_id": 1,
+          "home_team_score": 0,
+          "away_team_score": 2
+        },
+        {
           "match_id": 62,
           "home_team_score": 0,
           "away_team_score": 0
@@ -211,6 +252,13 @@
           "match_id": 64,
           "home_team_score": 0,
           "away_team_score": 0
+        }
+      ],
+      "scores": [
+        {
+          "id": 1,
+          "scorePoints": 0,
+          "winnerPoints": 0
         }
       ],
       "groupStageXtra": 10,
@@ -261,6 +309,11 @@
       ],
       "predictions": [
         {
+          "match_id": 1,
+          "home_team_score": 2,
+          "away_team_score": 0
+        },
+        {
           "match_id": 62,
           "home_team_score": 0,
           "away_team_score": 0
@@ -274,6 +327,13 @@
           "match_id": 64,
           "home_team_score": 0,
           "away_team_score": 0
+        }
+      ],
+      "scores": [
+        {
+          "id": 1,
+          "scorePoints": 0,
+          "winnerPoints": 0
         }
       ],
       "groupStageXtra": 9,
@@ -324,6 +384,11 @@
       ],
       "predictions": [
         {
+          "match_id": 1,
+          "home_team_score": 0,
+          "away_team_score": 0
+        },
+        {
           "match_id": 62,
           "home_team_score": 0,
           "away_team_score": 0
@@ -337,6 +402,13 @@
           "match_id": 64,
           "home_team_score": 0,
           "away_team_score": 0
+        }
+      ],
+      "scores": [
+        {
+          "id": 1,
+          "scorePoints": 0,
+          "winnerPoints": 0
         }
       ],
       "groupStageXtra": 11,
@@ -387,6 +459,11 @@
       ],
       "predictions": [
         {
+          "match_id": 1,
+          "home_team_score": 0,
+          "away_team_score": 0
+        },
+        {
           "match_id": 62,
           "home_team_score": 0,
           "away_team_score": 0
@@ -400,6 +477,13 @@
           "match_id": 64,
           "home_team_score": 0,
           "away_team_score": 0
+        }
+      ],
+      "scores": [
+        {
+          "id": 1,
+          "scorePoints": 0,
+          "winnerPoints": 0
         }
       ],
       "groupStageXtra": 15,
@@ -450,6 +534,11 @@
       ],
       "predictions": [
         {
+          "match_id": 1,
+          "home_team_score": 0,
+          "away_team_score": 0
+        },
+        {
           "match_id": 62,
           "home_team_score": 0,
           "away_team_score": 0
@@ -463,6 +552,13 @@
           "match_id": 64,
           "home_team_score": 0,
           "away_team_score": 0
+        }
+      ],
+      "scores": [
+        {
+          "id": 1,
+          "scorePoints": 0,
+          "winnerPoints": 0
         }
       ],
       "groupStageXtra": 12,
@@ -513,6 +609,11 @@
       ],
       "predictions": [
         {
+          "match_id": 1,
+          "home_team_score": 0,
+          "away_team_score": 0
+        },
+        {
           "match_id": 62,
           "home_team_score": 0,
           "away_team_score": 0
@@ -526,6 +627,13 @@
           "match_id": 64,
           "home_team_score": 0,
           "away_team_score": 0
+        }
+      ],
+      "scores": [
+        {
+          "id": 1,
+          "scorePoints": 0,
+          "winnerPoints": 0
         }
       ],
       "groupStageXtra": 10,
@@ -576,6 +684,11 @@
       ],
       "predictions": [
         {
+          "match_id": 1,
+          "home_team_score": 0,
+          "away_team_score": 0
+        },
+        {
           "match_id": 62,
           "home_team_score": 0,
           "away_team_score": 0
@@ -589,6 +702,13 @@
           "match_id": 64,
           "home_team_score": 0,
           "away_team_score": 0
+        }
+      ],
+      "scores": [
+        {
+          "id": 1,
+          "scorePoints": 0,
+          "winnerPoints": 0
         }
       ],
       "groupStageXtra": 10,
@@ -639,6 +759,11 @@
       ],
       "predictions": [
         {
+          "match_id": 1,
+          "home_team_score": 0,
+          "away_team_score": 0
+        },
+        {
           "match_id": 62,
           "home_team_score": 0,
           "away_team_score": 0
@@ -652,6 +777,13 @@
           "match_id": 64,
           "home_team_score": 0,
           "away_team_score": 0
+        }
+      ],
+      "scores": [
+        {
+          "id": 1,
+          "scorePoints": 0,
+          "winnerPoints": 0
         }
       ],
       "groupStageXtra": 11,
@@ -702,6 +834,11 @@
       ],
       "predictions": [
         {
+          "match_id": 1,
+          "home_team_score": 0,
+          "away_team_score": 0
+        },
+        {
           "match_id": 62,
           "home_team_score": 0,
           "away_team_score": 0
@@ -715,6 +852,13 @@
           "match_id": 64,
           "home_team_score": 0,
           "away_team_score": 0
+        }
+      ],
+      "scores": [
+        {
+          "id": 1,
+          "scorePoints": 0,
+          "winnerPoints": 0
         }
       ],
       "groupStageXtra": 15,

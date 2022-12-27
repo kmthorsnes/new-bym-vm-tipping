@@ -22,7 +22,7 @@ import SisteResultater from "./siste-resultater/SisteResultater";
 import NesteKamper from "./neste-kamper/NesteKamper";
 import Resultatliste from "./resultatliste/Resultatliste";
 import Livedata from "./data/Livedata";
-import Argentina from "././assets/images/argentina.gif";
+// import Argentina from "././assets/images/argentina.gif";
 // import LastUpdated from "./sistOppdatert/SistOppdatert";
 
 const playRandomSound = () => {
@@ -139,10 +139,10 @@ function App() {
               <div className="m-4">
                 <Livedata />
               </div>
-              <div className="w-full cursor-pointer" onClick={playChampSound}>
+              {/* <div className="w-full cursor-pointer" onClick={playChampSound}>
                 {" "}
 <div className="div"><img src={Argentina} alt=""></img></div>
-              </div>
+              </div>  */}
             </div>
           </div>
           <div className="mb-2 flex w-full  items-center justify-center mobile-only:flex-wrap ">

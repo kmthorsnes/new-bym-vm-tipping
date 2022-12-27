@@ -28,8 +28,8 @@ const Livedata = () => {
   return (
     <>
       {apidata.length !== 0 && (
-        <div>
-          <div className="font-2xl font-bold">Live score</div>
+        <div className=" bg-gradient-to-r from-black-default to-gray-800 rounded-lg p-4">
+          <div className="font-2xl text-white-default text-center font-bold">Live score</div>
           {apidata.map(
             (item: {
               away_team: any;
@@ -38,10 +38,18 @@ const Livedata = () => {
               location: string;
               name: string;
             }) => (
-              <div key={item.id}>
+              <div className="text-white-default text-center flex justify-center" key={item.id}>
+                <div>
                 {capitalize(translateCountry(item.home_team.name))}{" "}
-                {item.home_team.goals} - {item.away_team.goals}{" "}
-                {capitalize(translateCountry(item.away_team.name))}{" "}
+                <img
+            className="h-3 w-auto rounded-full"
+            src={`https://countryflagsapi.com/svg/argentina`}
+            alt={`${item.home_team.name} flag`}
+          />{" "}
+                </div>
+
+                <div>{item.home_team.goals} - {item.away_team.goals}{" "}</div>
+                <div>{capitalize(translateCountry(item.away_team.name))}{" "}</div>
               </div>
             )
           )}
