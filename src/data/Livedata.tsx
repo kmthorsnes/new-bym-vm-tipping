@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { translateCountry, capitalize } from "../utils/helperFunctions";
+import Flag from 'react-world-flags';
 
 const Livedata = () => {
   const getData = async (url: string) => {
@@ -34,6 +35,8 @@ const Livedata = () => {
             (item: {
               away_team: any;
               home_team: any;
+              home_team_country: string;
+              away_team_country: string;
               id: number;
               location: string;
               name: string;
@@ -41,15 +44,17 @@ const Livedata = () => {
               <div className="text-white-default text-center flex justify-center" key={item.id}>
                 <div>
                 {capitalize(translateCountry(item.home_team.name))}{" "}
-                <img
-            className="h-3 w-auto rounded-full"
-            src={`https://countryflagsapi.com/svg/argentina`}
-            alt={`${item.home_team.name} flag`}
-          />{" "}
+                <Flag code={ item.home_team_country } />
+
                 </div>
 
                 <div>{item.home_team.goals} - {item.away_team.goals}{" "}</div>
-                <div>{capitalize(translateCountry(item.away_team.name))}{" "}</div>
+                <div>
+                  <p>{item.away_team.name}</p>
+                {capitalize(translateCountry(item.away_team.name))}{" "}
+                <Flag code={ item.away_team.name } />
+
+                </div>
               </div>
             )
           )}
