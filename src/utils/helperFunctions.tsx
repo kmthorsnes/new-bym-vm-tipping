@@ -14,3 +14,13 @@ export function capitalize(input: string): string {
   );
   return capitalizedWords.join(" ");
 }
+
+export function translateCountryCode(input: string): string {
+  switch (input.toLowerCase()) {
+    case "cro":
+      return "hrv";
+    default:
+      return input;
+  }
+}
+

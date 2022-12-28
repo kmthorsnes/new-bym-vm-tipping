@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { translateCountry, capitalize } from "../utils/helperFunctions";
-import Flag from 'react-world-flags';
+import {
+  translateCountry,
+  capitalize,
+  translateCountryCode,
+} from "../utils/helperFunctions";
+import Flag from "react-world-flags";
 
 const Livedata = () => {
   const getData = async (url: string) => {
@@ -29,8 +33,10 @@ const Livedata = () => {
   return (
     <>
       {apidata.length !== 0 && (
-        <div className=" bg-gradient-to-r from-black-default to-gray-800 rounded-lg p-4">
-          <div className="font-2xl text-white-default text-center font-bold">Live score</div>
+        <div className=" rounded-lg bg-gradient-to-r from-black-default to-gray-800 p-4">
+          <div className="font-2xl text-center font-bold text-white-default">
+            Live score
+          </div>
           {apidata.map(
             (item: {
               away_team: any;
@@ -40,20 +46,34 @@ const Livedata = () => {
               id: number;
               location: string;
               name: string;
+              country: string;
             }) => (
-              <div className="text-white-default text-center flex justify-center" key={item.id}>
+              <div
+                className="flex justify-center text-center text-white-default"
+                key={item.id}
+              >
                 <div>
-                {capitalize(translateCountry(item.home_team.name))}{" "}
-                <Flag code={ item.home_team_country } />
-
+                  {capitalize(translateCountry(item.home_team.name))}{" "}
+                  <div className="h-full flex justify-center items-center">
+                    <Flag
+                      code={translateCountryCode(item.home_team.country)}
+                      className="h-10"
+                    />
+                  </div>{" "}
                 </div>
 
-                <div>{item.home_team.goals} - {item.away_team.goals}{" "}</div>
                 <div>
-                  <p>{item.away_team.name}</p>
-                {capitalize(translateCountry(item.away_team.name))}{" "}
-                <Flag code={ item.away_team.name } />
+                {" "} {item.home_team.goals} - {item.away_team.goals}{" "}
+                </div>
 
+                <div>
+                  {capitalize(translateCountry(item.away_team.name))}{" "}
+                  <div className="h-full flex justify-center items-center">
+                    <Flag
+                      code={translateCountryCode(item.away_team.country)}
+                      className="h-10"
+                    />
+                  </div>{" "}
                 </div>
               </div>
             )
