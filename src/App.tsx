@@ -21,6 +21,7 @@ import levelClear from "././assets/sounds/music/levelclear.mp3";
 import SisteResultater from "./siste-resultater/SisteResultater";
 import NesteKamper from "./neste-kamper/NesteKamper";
 import Resultatliste from "./resultatliste/Resultatliste";
+import Resultatliste3 from "./resultatliste/Resultatliste3";
 import Livedata from "./data/Livedata";
 // import Argentina from "././assets/images/argentina.gif";
 // import LastUpdated from "./sistOppdatert/SistOppdatert";
@@ -170,6 +171,7 @@ function App() {
             <span className="text-center">Sist oppdatert:19.12.22</span>
             {/* <LastUpdated /> */}
             <Wclogo />
+            <Resultatliste3 />
           </div>
         </div>
       </div>

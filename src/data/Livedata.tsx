@@ -33,7 +33,7 @@ const Livedata = () => {
   return (
     <>
       {apidata.length !== 0 && (
-        <div className=" rounded-lg bg-gradient-to-r from-black-default to-gray-800 p-4">
+        <div className="rounded-lg bg-gradient-to-r from-black-default to-gray-800 p-4">
           <div className="font-2xl text-center font-bold text-white-default">
             Live score
           </div>
@@ -49,15 +49,15 @@ const Livedata = () => {
               country: string;
             }) => (
               <div
-                className="flex justify-center text-center text-white-default"
+                className="flex justify-center text-center text-white-default gap-2"
                 key={item.id}
               >
-                <div>
+                <div className="flex flex-col gap-2 items-center justify-center">
                   {capitalize(translateCountry(item.home_team.name))}{" "}
-                  <div className="h-full flex justify-center items-center">
+                  <div className=" w-10 flex-col justify-center">
                     <Flag
                       code={translateCountryCode(item.home_team.country)}
-                      className="h-10"
+                      className="rounded-lg"
                     />
                   </div>{" "}
                 </div>
@@ -66,12 +66,12 @@ const Livedata = () => {
                 {" "} {item.home_team.goals} - {item.away_team.goals}{" "}
                 </div>
 
-                <div>
+                <div className="flex flex-col gap-2 items-center justify-center">
                   {capitalize(translateCountry(item.away_team.name))}{" "}
-                  <div className="h-full flex justify-center items-center">
+                  <div className=" w-10 flex-col justify-center">
                     <Flag
                       code={translateCountryCode(item.away_team.country)}
-                      className="h-10"
+                      className="rounded-lg"
                     />
                   </div>{" "}
                 </div>
